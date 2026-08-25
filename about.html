@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ABOUT | STUDIO ROBOK</title>
+
+  <meta
+    name="description"
+    content="2009년부터 종합 게임 스트리머로 활동해 온 로복이 만든 STUDIO ROBOK. 머더미스터리 제작과 제조를 통해 새로운 경험을 만듭니다."
+  >
+
+  <style>
+
+    /* ========================================
+       RESET
+    ======================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+
+      font-family:
+        Pretendard,
+        "Noto Sans KR",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
+    header {
+      height: 92px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 5vw;
+
+      background: #ffffff;
+      border-bottom: 1px solid #222222;
+    }
+
+    .logo {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      display: block;
+
+      width: 118px;
+      max-height: 68px;
+
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      gap: 46px;
+
+      font-size: 11px;
+      font-weight: 500;
+
+      letter-spacing: 0.28em;
+    }
+
+    nav a {
+      position: relative;
+
+      padding: 8px 0;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 2px;
+
+      width: 0;
+      height: 1px;
+
+      background: #111111;
+
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+
+    /* ========================================
+       PAGE INTRO
+    ======================================== */
+
+    .about-hero {
+      max-width: 1240px;
+
+      margin: 0 auto;
+
+      padding: 90px 30px 110px;
+    }
+
+    .hero-label {
+      margin-bottom: 14px;
+
+      font-size: 10px;
+      font-weight: 500;
+
+      letter-spacing: 0.32em;
+
+      color: #777777;
+    }
+
+    .hero-title {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(52px, 7vw, 96px);
+
+      font-weight: 400;
+
+      line-height: 0.95;
+
+      letter-spacing: -0.055em;
+
+      margin-bottom: 65px;
+    }
+
+
+    /* ========================================
+       PROFILE
+    ======================================== */
+
+    .profile-grid {
+      display: grid;
+
+      grid-template-columns: 1.1fr 0.9fr;
+
+      gap: 90px;
+
+      align-items: center;
+    }
+
+    .profile-copy {
+      max-width: 700px;
+    }
+
+    .profile-greeting {
+      margin-bottom: 20px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(22px, 2.2vw, 32px);
+
+      line-height: 1.6;
+
+      letter-spacing: -0.04em;
+    }
+
+    .profile-catch {
+      margin-bottom: 28px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(28px, 3.2vw, 46px);
+
+      line-height: 1.45;
+
+      letter-spacing: -0.045em;
+    }
+
+    .profile-catch strong {
+      font-weight: 500;
+    }
+
+    .profile-intro {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(16px, 1.4vw, 20px);
+
+      line-height: 1.95;
+
+      color: #444444;
+    }
+
+
+    /* FANART */
+
+    .profile-art {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+    }
+
+    .fanart-frame {
+      width: 100%;
+      max-width: 450px;
+
+      overflow: hidden;
+
+      background: #eaf2ff;
+
+      border: 1px solid #eeeeee;
+    }
+
+    .fanart-frame img {
+      width: 100%;
+      height: auto;
+
+      display: block;
+    }
+
+    .fanart-caption {
+      width: 100%;
+      max-width: 450px;
+
+      margin-top: 18px;
+
+      display: flex;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding-top: 13px;
+
+      border-top: 1px solid #999999;
+
+      font-size: 10px;
+
+      letter-spacing: 0.18em;
+    }
+
+    .fanart-caption strong {
+      font-weight: 500;
+    }
+
+    .fanart-caption span {
+      color: #777777;
+    }
+
+
+    /* ========================================
+       STORY
+    ======================================== */
+
+    .story {
+      background: #080808;
+      color: #ffffff;
+
+      padding: 120px 8vw 135px;
+    }
+
+    .story-inner {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: 250px 1px 1fr;
+
+      gap: 60px;
+    }
+
+    .story-label {
+      padding-top: 6px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.3em;
+
+      color: #cfcfcf;
+    }
+
+    .story-label span {
+      display: block;
+
+      margin-top: 9px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 20px;
+
+      letter-spacing: -0.03em;
+
+      color: #ffffff;
+    }
+
+    .story-label::after {
+      content: "";
+
+      display: block;
+
+      width: 25px;
+      height: 1px;
+
+      margin-top: 27px;
+
+      background: #ffffff;
+    }
+
+    .story-line {
+      width: 1px;
+
+      min-height: 1400px;
+
+      background: #444444;
+    }
+
+    .story-copy {
+      max-width: 750px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(16px, 1.35vw, 19px);
+
+      line-height: 2;
+
+      color: #dddddd;
+    }
+
+    .story-copy p + p {
+      margin-top: 27px;
+    }
+
+    .story-copy strong {
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+
+    /* ========================================
+       LARGE STATEMENT
+    ======================================== */
+
+    .statement {
+      margin: 70px 0;
+
+      padding: 42px 0;
+
+      border-top: 1px solid #555555;
+      border-bottom: 1px solid #555555;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(27px, 3.2vw, 44px);
+
+      line-height: 1.55;
+
+      letter-spacing: -0.045em;
+
+      color: #ffffff;
+    }
+
+    .statement strong {
+      font-weight: 500;
+    }
+
+
+    /* ========================================
+       SECOND CHAPTER
+    ======================================== */
+
+    .chapter-title {
+      margin-top: 80px;
+      margin-bottom: 40px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(28px, 3vw, 42px);
+
+      line-height: 1.5;
+
+      letter-spacing: -0.045em;
+
+      color: #ffffff;
+    }
+
+
+    /* ========================================
+       MANUFACTURING WALL
+    ======================================== */
+
+    .wall {
+      margin: 70px 0;
+
+      padding: 42px 0;
+
+      border-top: 1px solid #555555;
+      border-bottom: 1px solid #555555;
+    }
+
+    .wall-small {
+      display: block;
+
+      margin-bottom: 12px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.28em;
+
+      color: #888888;
+    }
+
+    .wall-copy {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(24px, 2.7vw, 38px);
+
+      line-height: 1.6;
+
+      letter-spacing: -0.04em;
+
+      color: #ffffff;
+    }
+
+
+    /* ========================================
+       MISSION
+    ======================================== */
+
+    .mission {
+      margin-top: 85px;
+
+      padding: 70px 0 20px;
+    }
+
+    .mission-label {
+      margin-bottom: 22px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.3em;
+
+      color: #888888;
+    }
+
+    .mission-main {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(31px, 4vw, 54px);
+
+      line-height: 1.5;
+
+      letter-spacing: -0.05em;
+
+      color: #ffffff;
+    }
+
+    .mission-main strong {
+      position: relative;
+
+      display: inline;
+      font-weight: 500;
+    }
+
+    .mission-main strong::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -7px;
+
+      width: 100%;
+      height: 1px;
+
+      background: #ffffff;
+    }
+
+    .mission-sub {
+      margin-top: 45px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(18px, 1.7vw, 23px);
+
+      line-height: 1.9;
+
+      color: #dddddd;
+    }
+
+
+    /* ========================================
+       CLOSING
+    ======================================== */
+
+    .closing {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      padding: 110px 30px 120px;
+    }
+
+    .closing-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1.5fr;
+
+      gap: 70px;
+
+      align-items: start;
+    }
+
+    .closing-label {
+      font-size: 10px;
+
+      letter-spacing: 0.3em;
+
+      color: #777777;
+    }
+
+    .closing-copy {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(24px, 2.6vw, 38px);
+
+      line-height: 1.65;
+
+      letter-spacing: -0.045em;
+    }
+
+    .closing-copy strong {
+      font-weight: 500;
+    }
+
+    .signature {
+      margin-top: 55px;
+
+      padding-top: 24px;
+
+      border-top: 1px solid #999999;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+    }
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      max-width: 1320px;
+
+      margin: 0 auto;
+
+      border-top: 1px solid #777777;
+
+      padding: 28px 3vw 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.22em;
+    }
+
+
+    /* ========================================
+       TABLET
+    ======================================== */
+
+    @media (max-width: 1000px) {
+
+      .profile-grid {
+        gap: 50px;
+      }
+
+      .story-inner {
+        grid-template-columns: 200px 1px 1fr;
+
+        gap: 40px;
+      }
+
+    }
+
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media (max-width: 768px) {
+
+      header {
+        height: 78px;
+
+        padding: 0 20px;
+      }
+
+      .logo img {
+        width: 94px;
+        max-height: 56px;
+      }
+
+      nav {
+        gap: 15px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.17em;
+      }
+
+
+      /* HERO */
+
+      .about-hero {
+        padding:
+          60px
+          25px
+          80px;
+      }
+
+      .hero-title {
+        font-size: 58px;
+
+        margin-bottom: 45px;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+      }
+
+      .profile-art {
+        align-items: flex-start;
+      }
+
+      .fanart-frame,
+      .fanart-caption {
+        max-width: 420px;
+      }
+
+
+      /* STORY */
+
+      .story {
+        padding:
+          80px
+          25px
+          95px;
+      }
+
+      .story-inner {
+        display: block;
+      }
+
+      .story-label {
+        margin-bottom: 30px;
+      }
+
+      .story-line {
+        width: 100%;
+        min-height: 0;
+        height: 1px;
+
+        margin-bottom: 42px;
+      }
+
+      .story-copy {
+        font-size: 16px;
+
+        line-height: 1.95;
+      }
+
+      .statement {
+        margin: 55px 0;
+
+        padding: 35px 0;
+
+        font-size: 28px;
+      }
+
+      .chapter-title {
+        margin-top: 65px;
+
+        font-size: 30px;
+      }
+
+      .wall {
+        margin: 55px 0;
+
+        padding: 35px 0;
+      }
+
+      .wall-copy {
+        font-size: 26px;
+      }
+
+      .mission {
+        margin-top: 60px;
+
+        padding-top: 45px;
+      }
+
+      .mission-main {
+        font-size: 31px;
+      }
+
+      .mission-sub {
+        font-size: 18px;
+      }
+
+
+      /* CLOSING */
+
+      .closing {
+        padding:
+          80px
+          25px
+          90px;
+      }
+
+      .closing-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .closing-copy {
+        font-size: 27px;
+      }
+
+
+      /* FOOTER */
+
+      footer {
+        margin: 0 25px;
+
+        padding-left: 0;
+        padding-right: 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+
+    }
+
+
+    /* ========================================
+       SMALL MOBILE
+    ======================================== */
+
+    @media (max-width: 430px) {
+
+      nav {
+        gap: 9px;
+
+        font-size: 7px;
+      }
+
+      .logo img {
+        width: 88px;
+      }
+
+      .hero-title {
+        font-size: 49px;
+      }
+
+      .profile-catch {
+        font-size: 30px;
+      }
+
+      .statement {
+        font-size: 25px;
+      }
+
+      .chapter-title {
+        font-size: 27px;
+      }
+
+      .wall-copy {
+        font-size: 23px;
+      }
+
+      .mission-main {
+        font-size: 28px;
+      }
+
+      .closing-copy {
+        font-size: 24px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ========================================
+       HEADER
+  ========================================= -->
+
+  <header>
+
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="STUDIO ROBOK 홈"
+    >
+      <img
+        src="studio-robok-logo.png"
+        alt="STUDIO ROBOK"
+      >
+    </a>
+
+
+    <nav>
+
+      <a href="games.html">
+        GAMES
+      </a>
+
+      <a
+        class="active"
+        href="about.html"
+      >
+        ABOUT
+      </a>
+
+      <a href="contact.html">
+        CONTACT
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- ========================================
+         ABOUT HERO
+    ========================================= -->
+
+    <section class="about-hero">
+
+
+      <div class="hero-label">
+        STUDIO ROBOK / ABOUT
+      </div>
+
+
+      <h1 class="hero-title">
+        ABOUT
+      </h1>
+
+
+
+      <div class="profile-grid">
+
+
+        <!-- TEXT -->
+
+        <div class="profile-copy">
+
+
+          <div class="profile-greeting">
+            안녕하세요.
+          </div>
+
+
+          <div class="profile-catch">
+
+            당신이 모르는 게임의 모든 것을<br>
+            <strong>파헤치고, 만들어낸다!</strong>
+
+          </div>
+
+
+          <div class="profile-intro">
+
+            2009년부터 종합 게임 스트리머로 활동해 온<br>
+            스튜디오 로복의 대표, <strong>로복</strong>입니다.
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- FANART -->
+
+        <div class="profile-art">
+
+
+          <div class="fanart-frame">
+
+            <img
+              src="robok-fanart.png"
+              alt="로복 팬아트"
+            >
+
+          </div>
+
+
+          <div class="fanart-caption">
+
+            <strong>
+              ROBOK
+            </strong>
+
+            <span>
+              FOUNDER / CREATOR
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         STORY
+    ========================================= -->
+
+    <section class="story">
+
+
+      <div class="story-inner">
+
+
+        <div class="story-label">
+
+          WHY WE STARTED
+
+          <span>
+            STUDIO ROBOK
+          </span>
+
+        </div>
+
+
+        <div class="story-line"></div>
+
+
+
+        <div class="story-copy">
+
+
+          <p>
+            머더미스터리를 접한 지 벌써 2년이 되었네요.
+          </p>
+
+
+          <p>
+            머더미스터리는 참 복잡한 장르입니다.
+          </p>
+
+
+          <p>
+            끝내고 나면, 멋진 소설을 읽은 것 같은
+            기분 좋은 부유감이 남고
+            또 한편으론, 명작 게임을 한 것 같은 즐거움에
+            가슴이 두근거리죠.
+          </p>
+
+
+          <p>
+            문학과 게임, 양쪽의 얼굴을 다 가진 이 장르가
+            35년이라는 세월을 살면서 웬만한 게임,
+            웬만한 영화는 다 봤다고 자부하고 있던
+            제 뒤통수를 세게 때려버렸습니다.
+          </p>
+
+
+          <p>
+            얼얼한 충격이 한동안 가시지 않았고,
+            그렇게 정신을 놓고 거의 반년 동안
+            폐인처럼 지냈습니다.
+          </p>
+
+
+          <p>
+            잠자는 시간도 아껴가며,
+            밤낮없이 머더미스터리를 즐겨야 했거든요.
+          </p>
+
+
+          <p>
+            하면 할수록, 질리기는커녕
+            다음 작품이 기다려지는 장르...
+          </p>
+
+
+
+          <!-- BIG STATEMENT -->
+
+          <div class="statement">
+
+            전 정했습니다.
+
+            <br>
+
+            <strong>
+              이걸 내 새로운 길로 삼자!
+            </strong>
+
+          </div>
+
+
+
+          <!-- CHAPTER 2 -->
+
+          <div class="chapter-title">
+            그래서 머더미스터리를 만들기 시작했습니다.
+          </div>
+
+
+          <p>
+            지금까지 종합 게임 스트리머로 활동하면서
+            온갖 게임을 즐겨봤습니다.
+          </p>
+
+
+          <p>
+            연극영화과 출신이라,
+            본래 영화 감상이 취미이기도 했죠.
+          </p>
+
+
+          <p>
+            제가 여태 쌓아온 모든 경험치를 쏟아부어,
+            <strong>
+              게임성과 스토리를 전부 만족시키는
+              머더미스터리를 만들자!
+            </strong>
+          </p>
+
+
+          <p>
+            그렇게 다짐했습니다.
+          </p>
+
+
+
+          <!-- WALL -->
+
+          <div class="wall">
+
+            <span class="wall-small">
+              AND THEN, WE HIT A WALL.
+            </span>
+
+            <div class="wall-copy">
+
+              하지만, 저흰 최선을 다해 하나의 작품을
+              완성해 낸 뒤에 절망하고 말았습니다.
+
+              <br><br>
+
+              <strong>
+                ‘패키지 제조’라는 어마어마하게 높은 벽에
+                가로막힌 겁니다.
+              </strong>
+
+            </div>
+
+          </div>
+
+
+
+          <p>
+            국내 업체는 소량 제조가 불가능하거나
+            가능해도 마진이 남지 않을 정도였습니다.
+          </p>
+
+
+          <p>
+            해외 업체는 마진이 남긴 하지만,
+            대량 주문만 가능했습니다.
+          </p>
+
+
+          <p>
+            결국 머더미스터리를 직접 만든다는 것 자체가
+            <strong>‘손해 보는 장사’</strong>라는 현실에
+            부딪히고 만 겁니다.
+          </p>
+
+
+
+          <!-- MISSION -->
+
+          <div class="mission">
+
+
+            <div class="mission-label">
+              OUR NEXT CHALLENGE
+            </div>
+
+
+            <div class="mission-main">
+
+              그래서 저흰,<br>
+              이것도 해보기로 했습니다.
+
+              <br><br>
+
+              <strong>
+                국내에서 합리적인 가격으로<br>
+                머더미스 패키지를 제작할 수 있는<br>
+                유일한 회사가 되자!
+              </strong>
+
+            </div>
+
+
+            <div class="mission-sub">
+
+              저를 포함해서,
+              머더미스터리를 제작하고 싶다는 꿈이 있는
+              국내의 모든 작가분들이
+
+              <br><br>
+
+              <strong>
+                ‘제조’라는 단계 때문에
+                꿈을 포기하지 않도록 만들자!
+              </strong>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         CLOSING
+    ========================================= -->
+
+    <section class="closing">
+
+
+      <div class="closing-grid">
+
+
+        <div class="closing-label">
+          FROM ROBOK
+        </div>
+
+
+        <div>
+
+
+          <div class="closing-copy">
+
+            한국의 머더미스터리를 사랑하는
+            모든 분들을 위해
+
+            <br><br>
+
+            <strong>
+              겁 없이 뛰어들어 보려고 합니다.
+            </strong>
+
+            <br><br>
+
+            열심히 하겠습니다!
+
+            <br>
+
+            감사합니다.
+
+          </div>
+
+
+          <div class="signature">
+
+            로복
+
+            <br>
+
+            대표 / STUDIO ROBOK
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div>
+      STUDIO ROBOK
+    </div>
+
+    <div>
+      © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
