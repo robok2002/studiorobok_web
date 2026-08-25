@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -28,8 +29,8 @@
     }
 
     body {
-      background: #fff;
-      color: #111;
+      background: #ffffff;
+      color: #111111;
 
       font-family:
         Pretendard,
@@ -40,7 +41,6 @@
         sans-serif;
 
       line-height: 1.6;
-
       overflow-x: hidden;
     }
 
@@ -68,9 +68,9 @@
 
       padding: 0 5vw;
 
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid #222222;
 
-      background: #fff;
+      background: #ffffff;
     }
 
     .logo img {
@@ -104,7 +104,7 @@
       width: 0;
       height: 1px;
 
-      background: #111;
+      background: #111111;
 
       transition: width 0.25s ease;
     }
@@ -125,7 +125,6 @@
 
     .hero-intro {
       text-align: center;
-
       margin-bottom: 42px;
     }
 
@@ -146,7 +145,6 @@
 
     .hero-intro p {
       font-size: 12px;
-
       letter-spacing: 0.32em;
     }
 
@@ -157,26 +155,25 @@
     ============================== */
 
     .showcase {
-      max-width: 1450px;
+      max-width: 1180px;
 
       margin: 0 auto;
 
+      position: relative;
+
       display: flex;
       align-items: center;
-
-      gap: 20px;
     }
 
     .slider-window {
       width: 100%;
-
       overflow: hidden;
     }
 
     .slider-track {
       display: flex;
 
-      gap: 26px;
+      gap: 12px;
 
       transition:
         transform 0.5s
@@ -190,7 +187,7 @@
     ============================== */
 
     .work-card {
-      min-width: calc((100% - 52px) / 3);
+      min-width: calc((100% - 24px) / 3);
 
       display: flex;
       flex-direction: column;
@@ -198,32 +195,62 @@
 
 
 
-    /* PACKAGE IMAGE */
+    /* ==============================
+       PACKAGE IMAGE
+    ============================== */
 
     .work-image {
       width: 100%;
       height: 430px;
 
       display: flex;
+      align-items: center;
       justify-content: center;
-      align-items: flex-end;
 
-      padding: 0 15px 12px;
+      padding: 0;
+
+      overflow: visible;
     }
 
     .work-image img {
+      display: block;
+
       width: 100%;
       height: 100%;
 
       object-fit: contain;
 
-      display: block;
-
       transition: transform 0.4s ease;
     }
 
-    .work-card:hover .work-image img {
-      transform: translateY(-5px);
+
+    /* 이미지별 실제 투명 여백 차이 보정 */
+
+    .work-card:nth-child(1) .work-image img {
+      transform: scale(1.03);
+    }
+
+    .work-card:nth-child(2) .work-image img {
+      transform: scale(0.94);
+    }
+
+    .work-card:nth-child(3) .work-image img {
+      transform: scale(1.10);
+    }
+
+
+    /* hover 시 scale 유지 */
+
+    .work-card:nth-child(1):hover .work-image img {
+      transform: translateY(-5px) scale(1.03);
+    }
+
+    .work-card:nth-child(2):hover .work-image img {
+      transform: translateY(-5px) scale(0.94);
+    }
+
+    .work-card:nth-child(3):hover .work-image img {
+      transform: translateY(-5px) scale(1.10);
     }
 
 
@@ -245,7 +272,7 @@
 
       padding-bottom: 11px;
 
-      border-bottom: 1px solid #999;
+      border-bottom: 1px solid #999999;
     }
 
     .work-number {
@@ -281,7 +308,7 @@
 
       margin-left: 55px;
 
-      border-bottom: 1px solid #999;
+      border-bottom: 1px solid #999999;
     }
 
     .meta-row {
@@ -302,11 +329,11 @@
     }
 
     .meta-label {
-      color: #333;
+      color: #333333;
     }
 
     .meta-value {
-      color: #111;
+      color: #111111;
     }
 
 
@@ -316,16 +343,18 @@
     ============================== */
 
     .slider-button {
-      flex: 0 0 54px;
+      position: absolute;
+
+      z-index: 10;
 
       width: 54px;
       height: 54px;
 
-      border: 1px solid #222;
+      border: 1px solid #222222;
       border-radius: 50%;
 
-      background: #fff;
-      color: #111;
+      background: #ffffff;
+      color: #111111;
 
       display: flex;
       align-items: center;
@@ -342,9 +371,17 @@
         opacity 0.2s ease;
     }
 
+    .slider-button.prev {
+      left: -75px;
+    }
+
+    .slider-button.next {
+      right: -75px;
+    }
+
     .slider-button:hover:not(:disabled) {
-      background: #111;
-      color: #fff;
+      background: #111111;
+      color: #ffffff;
     }
 
     .slider-button:disabled {
@@ -360,7 +397,7 @@
 
     .about {
       background: #070707;
-      color: #fff;
+      color: #ffffff;
 
       padding: 72px 8vw 82px;
     }
@@ -404,7 +441,7 @@
       width: 1px;
       height: 180px;
 
-      background: #777;
+      background: #777777;
     }
 
     .about-content {
@@ -436,7 +473,7 @@
 
       line-height: 1.8;
 
-      color: #ddd;
+      color: #dddddd;
     }
 
 
@@ -446,7 +483,7 @@
     ============================== */
 
     .contact {
-      background: #fff;
+      background: #ffffff;
 
       padding: 72px 8vw 55px;
     }
@@ -467,7 +504,7 @@
       width: 1px;
       height: 165px;
 
-      background: #999;
+      background: #999999;
     }
 
     .contact-content {
@@ -484,7 +521,7 @@
 
       font-size: clamp(23px, 2.4vw, 34px);
 
-      border-bottom: 1px solid #111;
+      border-bottom: 1px solid #111111;
 
       line-height: 1.15;
 
@@ -517,7 +554,7 @@
 
       margin: 0 auto;
 
-      border-top: 1px solid #777;
+      border-top: 1px solid #777777;
 
       padding: 28px 3vw 34px;
 
@@ -541,15 +578,15 @@
     @media (max-width: 1100px) {
 
       .showcase {
-        max-width: 1000px;
+        max-width: 920px;
       }
 
       .slider-track {
-        gap: 20px;
+        gap: 12px;
       }
 
       .work-card {
-        min-width: calc((100% - 40px) / 3);
+        min-width: calc((100% - 24px) / 3);
       }
 
       .work-image {
@@ -574,9 +611,15 @@
         width: 44px;
         height: 44px;
 
-        flex-basis: 44px;
-
         font-size: 23px;
+      }
+
+      .slider-button.prev {
+        left: -55px;
+      }
+
+      .slider-button.next {
+        right: -55px;
       }
 
     }
@@ -608,14 +651,12 @@
       }
 
 
-      /* HERO */
-
       .hero {
-        padding: 45px 10px 65px;
+        padding: 45px 48px 65px;
       }
 
       .hero-intro {
-        padding: 0 20px;
+        padding: 0 10px;
 
         margin-bottom: 28px;
       }
@@ -631,10 +672,8 @@
       }
 
 
-      /* SLIDER */
-
       .showcase {
-        gap: 6px;
+        max-width: 430px;
       }
 
       .slider-track {
@@ -647,9 +686,6 @@
 
       .work-image {
         height: 420px;
-
-        padding-left: 15px;
-        padding-right: 15px;
       }
 
       .work-info {
@@ -659,16 +695,20 @@
       }
 
       .slider-button {
-        width: 32px;
-        height: 32px;
+        width: 34px;
+        height: 34px;
 
-        flex: 0 0 32px;
-
-        font-size: 19px;
+        font-size: 20px;
       }
 
+      .slider-button.prev {
+        left: -42px;
+      }
 
-      /* ABOUT */
+      .slider-button.next {
+        right: -42px;
+      }
+
 
       .about {
         padding: 65px 25px 75px;
@@ -690,8 +730,6 @@
       }
 
 
-      /* CONTACT */
-
       .contact {
         padding: 65px 25px 50px;
       }
@@ -707,8 +745,6 @@
         height: 1px;
       }
 
-
-      /* FOOTER */
 
       footer {
         margin: 0 25px;
@@ -740,6 +776,11 @@
 
       .logo img {
         width: 92px;
+      }
+
+      .hero {
+        padding-left: 40px;
+        padding-right: 40px;
       }
 
       .work-image {
@@ -836,8 +877,6 @@
       <div class="showcase">
 
 
-        <!-- PREVIOUS -->
-
         <button
           class="slider-button prev"
           type="button"
@@ -848,17 +887,13 @@
 
 
 
-        <!-- SLIDER -->
-
         <div class="slider-window">
 
           <div class="slider-track">
 
 
 
-            <!-- ==========================
-                 001
-            ========================== -->
+            <!-- 001 -->
 
             <article class="work-card">
 
@@ -940,9 +975,7 @@
 
 
 
-            <!-- ==========================
-                 002
-            ========================== -->
+            <!-- 002 -->
 
             <article class="work-card">
 
@@ -1011,9 +1044,7 @@
 
 
 
-            <!-- ==========================
-                 003
-            ========================== -->
+            <!-- 003 -->
 
             <article class="work-card">
 
@@ -1085,8 +1116,6 @@
         </div>
 
 
-
-        <!-- NEXT -->
 
         <button
           class="slider-button next"
@@ -1265,17 +1294,13 @@
     const nextButton =
       document.querySelector(".slider-button.next");
 
-
     let currentIndex = 0;
-
 
 
     function getVisibleCards() {
 
       if (window.innerWidth <= 768) {
-
         return 1;
-
       }
 
       return 3;
@@ -1283,25 +1308,15 @@
     }
 
 
-
     function getGap() {
 
       if (window.innerWidth <= 768) {
-
         return 20;
-
       }
 
-      if (window.innerWidth <= 1100) {
-
-        return 20;
-
-      }
-
-      return 26;
+      return 12;
 
     }
-
 
 
     function updateButtons() {
@@ -1309,17 +1324,14 @@
       const visibleCards =
         getVisibleCards();
 
-
       const maxIndex =
         Math.max(
           0,
           cards.length - visibleCards
         );
 
-
       prevButton.disabled =
         currentIndex <= 0;
-
 
       nextButton.disabled =
         currentIndex >= maxIndex;
@@ -1327,19 +1339,14 @@
     }
 
 
-
     function updateSlider() {
 
       if (!cards.length) {
-
         return;
-
       }
-
 
       const visibleCards =
         getVisibleCards();
-
 
       const maxIndex =
         Math.max(
@@ -1347,37 +1354,30 @@
           cards.length - visibleCards
         );
 
-
       currentIndex =
         Math.min(
           currentIndex,
           maxIndex
         );
 
-
       const cardWidth =
         cards[0]
           .getBoundingClientRect()
           .width;
 
-
       const gap =
         getGap();
-
 
       const offset =
         currentIndex *
         (cardWidth + gap);
 
-
       track.style.transform =
         `translateX(-${offset}px)`;
-
 
       updateButtons();
 
     }
-
 
 
     nextButton.addEventListener(
@@ -1387,13 +1387,11 @@
         const visibleCards =
           getVisibleCards();
 
-
         const maxIndex =
           Math.max(
             0,
             cards.length - visibleCards
           );
-
 
         if (currentIndex < maxIndex) {
 
@@ -1405,7 +1403,6 @@
 
       }
     );
-
 
 
     prevButton.addEventListener(
@@ -1424,7 +1421,6 @@
     );
 
 
-
     window.addEventListener(
       "resize",
       updateSlider
@@ -1436,9 +1432,9 @@
       updateSlider
     );
 
-
   </script>
 
 
 </body>
 </html>
+```
