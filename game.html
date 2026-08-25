@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GAMES | STUDIO ROBOK</title>
+
+  <meta
+    name="description"
+    content="STUDIO ROBOK의 머더미스터리와 내러티브 게임을 만나보세요."
+  >
+
+  <style>
+
+    /* ========================================
+       RESET
+    ======================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+
+      font-family:
+        Pretendard,
+        "Noto Sans KR",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
+    header {
+      height: 92px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 5vw;
+
+      background: #ffffff;
+      border-bottom: 1px solid #222222;
+    }
+
+    .logo {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      display: block;
+
+      width: 118px;
+      max-height: 68px;
+
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      gap: 46px;
+
+      font-size: 11px;
+      font-weight: 500;
+
+      letter-spacing: 0.28em;
+    }
+
+    nav a {
+      position: relative;
+
+      padding: 8px 0;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 2px;
+
+      width: 0;
+      height: 1px;
+
+      background: #111111;
+
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+
+    /* ========================================
+       PAGE INTRO
+    ======================================== */
+
+    .archive {
+      max-width: 1240px;
+
+      margin: 0 auto;
+
+      padding: 90px 30px 120px;
+    }
+
+    .archive-head {
+      display: grid;
+
+      grid-template-columns: 1fr auto;
+
+      align-items: end;
+
+      gap: 40px;
+
+      padding-bottom: 42px;
+
+      border-bottom: 1px solid #111111;
+    }
+
+    .archive-label {
+      margin-bottom: 12px;
+
+      font-size: 10px;
+      font-weight: 500;
+
+      letter-spacing: 0.32em;
+
+      color: #777777;
+    }
+
+    .archive-title {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(55px, 7vw, 96px);
+
+      font-weight: 400;
+
+      line-height: 0.95;
+
+      letter-spacing: -0.055em;
+    }
+
+    .archive-description {
+      max-width: 350px;
+
+      padding-bottom: 5px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 14px;
+
+      line-height: 1.85;
+
+      color: #555555;
+    }
+
+
+    /* ========================================
+       GAME GRID
+    ======================================== */
+
+    .game-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      column-gap: 34px;
+      row-gap: 90px;
+
+      padding-top: 60px;
+    }
+
+
+    /* ========================================
+       GAME CARD
+    ======================================== */
+
+    .game-card {
+      display: flex;
+      flex-direction: column;
+
+      min-width: 0;
+
+      cursor: pointer;
+    }
+
+
+    /* IMAGE */
+
+    .game-image {
+      position: relative;
+
+      width: 100%;
+      height: 430px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 30px;
+
+      overflow: hidden;
+
+      background: #f8f8f8;
+    }
+
+    .game-image::after {
+      content: "VIEW GAME";
+
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      transform:
+        translate(-50%, -45%);
+
+      padding: 10px 15px;
+
+      background: #111111;
+      color: #ffffff;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: 9px;
+
+      letter-spacing: 0.25em;
+
+      opacity: 0;
+
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .game-image img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      transition:
+        transform 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.3s ease;
+    }
+
+
+    /* 패키지별 시각적 크기 보정 */
+
+    .game-card:nth-child(1) .game-image img {
+      transform: scale(1.03);
+    }
+
+    .game-card:nth-child(2) .game-image img {
+      transform: scale(0.87);
+    }
+
+    .game-card:nth-child(3) .game-image img {
+      transform: scale(0.97);
+    }
+
+
+    /* HOVER */
+
+    .game-card:hover .game-image::after {
+      opacity: 1;
+
+      transform:
+        translate(-50%, -50%);
+    }
+
+    .game-card:hover .game-image img {
+      opacity: 0.84;
+    }
+
+    .game-card:nth-child(1):hover .game-image img {
+      transform: scale(1.07);
+    }
+
+    .game-card:nth-child(2):hover .game-image img {
+      transform: scale(0.91);
+    }
+
+    .game-card:nth-child(3):hover .game-image img {
+      transform: scale(1.01);
+    }
+
+
+    /* ========================================
+       GAME INFORMATION
+    ======================================== */
+
+    .game-number {
+      margin-bottom: 16px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 12px;
+
+      letter-spacing: 0.18em;
+
+      color: #777777;
+    }
+
+    .game-title {
+      min-height: 65px;
+
+      margin-bottom: 22px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 23px;
+
+      font-weight: 400;
+
+      line-height: 1.4;
+
+      letter-spacing: -0.04em;
+    }
+
+    .game-meta {
+      border-top: 1px solid #999999;
+      border-bottom: 1px solid #999999;
+
+      padding: 13px 0;
+    }
+
+    .meta-row {
+      display: grid;
+
+      grid-template-columns: 100px 1fr;
+
+      gap: 15px;
+
+      padding: 3px 0;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 12px;
+    }
+
+    .meta-label {
+      color: #777777;
+    }
+
+    .meta-value {
+      color: #111111;
+    }
+
+
+    /* ========================================
+       BOTTOM STATEMENT
+    ======================================== */
+
+    .archive-bottom {
+      margin-top: 115px;
+
+      padding-top: 55px;
+
+      border-top: 1px solid #111111;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+    }
+
+    .archive-bottom-label {
+      font-size: 10px;
+
+      letter-spacing: 0.3em;
+
+      color: #777777;
+    }
+
+    .archive-bottom-copy {
+      max-width: 620px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(20px, 2vw, 28px);
+
+      line-height: 1.65;
+
+      letter-spacing: -0.035em;
+    }
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      max-width: 1320px;
+
+      margin: 0 auto;
+
+      border-top: 1px solid #777777;
+
+      padding: 28px 3vw 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.22em;
+    }
+
+
+    /* ========================================
+       TABLET
+    ======================================== */
+
+    @media (max-width: 1000px) {
+
+      .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        column-gap: 30px;
+      }
+
+      .game-image {
+        height: 420px;
+      }
+
+      .archive-head {
+        grid-template-columns: 1fr;
+      }
+
+      .archive-description {
+        max-width: 500px;
+      }
+
+    }
+
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media (max-width: 768px) {
+
+      header {
+        height: 78px;
+
+        padding: 0 20px;
+      }
+
+      .logo img {
+        width: 94px;
+        max-height: 56px;
+      }
+
+      nav {
+        gap: 15px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.17em;
+      }
+
+
+      /* ARCHIVE */
+
+      .archive {
+        padding:
+          60px
+          25px
+          85px;
+      }
+
+      .archive-head {
+        padding-bottom: 32px;
+
+        gap: 25px;
+      }
+
+      .archive-title {
+        font-size: 58px;
+      }
+
+      .archive-description {
+        font-size: 13px;
+      }
+
+
+      /* GRID */
+
+      .game-grid {
+        grid-template-columns: 1fr;
+
+        gap: 75px;
+
+        padding-top: 45px;
+      }
+
+      .game-image {
+        height: 440px;
+
+        margin-bottom: 25px;
+      }
+
+      .game-title {
+        min-height: auto;
+
+        font-size: 22px;
+      }
+
+
+      /* BOTTOM */
+
+      .archive-bottom {
+        margin-top: 85px;
+
+        padding-top: 40px;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+      }
+
+
+      /* FOOTER */
+
+      footer {
+        margin: 0 25px;
+
+        padding-left: 0;
+        padding-right: 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+
+    }
+
+
+    /* ========================================
+       SMALL MOBILE
+    ======================================== */
+
+    @media (max-width: 430px) {
+
+      nav {
+        gap: 9px;
+
+        font-size: 7px;
+      }
+
+      .logo img {
+        width: 88px;
+      }
+
+      .archive-title {
+        font-size: 50px;
+      }
+
+      .game-image {
+        height: 365px;
+      }
+
+      .game-title {
+        font-size: 20px;
+      }
+
+      .archive-bottom-copy {
+        font-size: 20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ========================================
+       HEADER
+  ========================================= -->
+
+  <header>
+
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="STUDIO ROBOK 홈"
+    >
+      <img
+        src="studio-robok-logo.png"
+        alt="STUDIO ROBOK"
+      >
+    </a>
+
+
+    <nav>
+
+      <a
+        class="active"
+        href="games.html"
+      >
+        GAMES
+      </a>
+
+      <a href="index.html#about">
+        ABOUT
+      </a>
+
+      <a href="index.html#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- ========================================
+         ARCHIVE
+    ========================================= -->
+
+    <section class="archive">
+
+
+      <div class="archive-head">
+
+
+        <div>
+
+          <div class="archive-label">
+            STUDIO ROBOK / GAME ARCHIVE
+          </div>
+
+          <h1 class="archive-title">
+            GAMES
+          </h1>
+
+        </div>
+
+
+        <p class="archive-description">
+          STUDIO ROBOK이 제작하는
+          머더미스터리와 내러티브 게임을 소개합니다.
+        </p>
+
+
+      </div>
+
+
+
+      <!-- ========================================
+           GAME GRID
+      ========================================= -->
+
+      <div class="game-grid">
+
+
+        <!-- =====================================
+             001
+        ====================================== -->
+
+        <a
+          class="game-card"
+          href="games/fanmeeting.html"
+          aria-label="이세계 탐정 : 팬미팅 살인사건 상세 페이지"
+        >
+
+
+          <div class="game-image">
+
+            <img
+              src="fanmeeting.png"
+              alt="이세계 탐정 : 팬미팅 살인사건"
+            >
+
+          </div>
+
+
+          <div class="game-number">
+            001 / MURDER MYSTERY
+          </div>
+
+
+          <h2 class="game-title">
+            이세계 탐정 : 팬미팅 살인사건
+          </h2>
+
+
+          <div class="game-meta">
+
+
+            <div class="meta-row">
+
+              <span class="meta-label">
+                제작
+              </span>
+
+              <span class="meta-value">
+                로복, 하다
+              </span>
+
+            </div>
+
+
+            <div class="meta-row">
+
+              <span class="meta-label">
+                플레이 인원
+              </span>
+
+              <span class="meta-value">
+                8인
+              </span>
+
+            </div>
+
+
+            <div class="meta-row">
+
+              <span class="meta-label">
+                플레이 타임
+              </span>
+
+              <span class="meta-value">
+                240m+
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+        </a>
+
+
+
+        <!-- =====================================
+             002
+        ====================================== -->
+
+        <a
+          class="game-card"
+          href="games/soul-light.html"
+          aria-label="영혼의 빛이 머무는 자리 상세 페이지"
+        >
+
+
+          <div class="game-image">
+
+            <img
+              src="soul-light.png"
+              alt="영혼의 빛이 머무는 자리"
+            >
+
+          </div>
+
+
+          <div class="game-number">
+            002 / MURDER MYSTERY
+          </div>
+
+
+          <h2 class="game-title">
+            영혼의 빛이 머무는 자리
+          </h2>
+
+
+          <div class="game-meta">
+
+
+            <div class="meta-row">
+
+              <span class="meta-label">
+                제작
+              </span>
+
+              <span class="meta-value">
+                머룡, 로복
+              </span>
+
+            </div>
+
+
+            <div class="meta-row">
+
+              <span class="meta-label">
+                플레이 인원
+              </span>
+
+              <span class="meta-value">
+                7인
+              </span>
+
+            </div>
+
+
+            <div class="meta-row">
+
+              <span class="meta-label">
+                플레이 타임
+              </span>
+
+              <span class="meta-value">
+                120분
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+        </a>
+
+
+
+        <!-- =====================================
+             003
+        ====================================== -->
+
+        <a
+          class="game-card"
+          href="games/star-tears.html"
+          aria-label="별이 내린 눈물 상세 페이지"
+        >
+
+
+          <div class="game-image">
+
+            <img
+              src="star-tears.png"
+              alt="별이 내린 눈물"
+            >
+
+          </div>
+
+
+          <div class="game-number">
+            003 / MURDER MYSTERY
+          </div>
+
+
+          <h2 class="game-title">
+            별이 내린 눈물
+          </h2>
+
+
+          <div class="game-meta">
+
+
+            <div class="meta-row">
+
+              <span class="meta-label">
+                제작
+              </span>
+
+              <span class="meta-value">
+                4ON
+              </span>
+
+            </div>
+
+
+            <div class="meta-row">
+
+              <span class="meta-label">
+                플레이 인원
+              </span>
+
+              <span class="meta-value">
+                6인
+              </span>
+
+            </div>
+
+
+            <div class="meta-row">
+
+              <span class="meta-label">
+                플레이 타임
+              </span>
+
+              <span class="meta-value">
+                120분
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+        </a>
+
+
+      </div>
+
+
+
+      <!-- ========================================
+           BOTTOM
+      ========================================= -->
+
+      <div class="archive-bottom">
+
+
+        <div class="archive-bottom-label">
+          STUDIO ROBOK
+        </div>
+
+
+        <div class="archive-bottom-copy">
+          이야기를 읽는 것에서 그치지 않고,<br>
+          직접 그 이야기 속의 인물이 되는 경험을 만듭니다.
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div>
+      STUDIO ROBOK
+    </div>
+
+    <div>
+      © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
