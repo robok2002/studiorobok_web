@@ -53,7 +53,6 @@
     }
 
 
-
     /* ==============================
        HEADER
     ============================== */
@@ -127,7 +126,6 @@
     }
 
 
-
     /* ==============================
        HERO
     ============================== */
@@ -175,7 +173,6 @@
     }
 
 
-
     /* ==============================
        SHOWCASE
     ============================== */
@@ -207,20 +204,18 @@
     }
 
 
-
     /* ==============================
        WORK CARD
     ============================== */
 
     .work-card {
-  min-width: calc((100% - 24px) / 3);
+      min-width: calc((100% - 24px) / 3);
 
-  display: flex;
-  flex-direction: column;
+      display: flex;
+      flex-direction: column;
 
-  cursor: pointer;
-}
-
+      cursor: pointer;
+    }
 
 
     /* ==============================
@@ -270,17 +265,16 @@
     /* Hover */
 
     .work-card:nth-child(1):hover .work-image img {
-  transform: translateY(-5px) scale(1.08);
-}
+      transform: translateY(-5px) scale(1.08);
+    }
 
-.work-card:nth-child(2):hover .work-image img {
-  transform: translateY(-5px) scale(0.91);
-}
+    .work-card:nth-child(2):hover .work-image img {
+      transform: translateY(-5px) scale(0.91);
+    }
 
-.work-card:nth-child(3):hover .work-image img {
-  transform: translateY(-5px) scale(1.02);
-}
-
+    .work-card:nth-child(3):hover .work-image img {
+      transform: translateY(-5px) scale(1.02);
+    }
 
 
     /* ==============================
@@ -365,7 +359,6 @@
     }
 
 
-
     /* ==============================
        SLIDER BUTTONS
     ============================== */
@@ -418,7 +411,6 @@
     }
 
 
-
     /* ==============================
        ABOUT
     ============================== */
@@ -427,7 +419,7 @@
       background: #070707;
       color: #ffffff;
 
-      padding: 72px 8vw 82px;
+      padding: 68px 8vw 72px;
     }
 
     .about-inner {
@@ -449,7 +441,7 @@
 
       letter-spacing: 0.3em;
 
-      padding-top: 9px;
+      padding-top: 7px;
     }
 
     .section-label::after {
@@ -460,50 +452,79 @@
       width: 22px;
       height: 1px;
 
-      margin-top: 27px;
+      margin-top: 24px;
 
       background: currentColor;
     }
 
     .about-line {
       width: 1px;
-      height: 180px;
+      height: 125px;
 
       background: #777777;
     }
 
     .about-content {
-      max-width: 690px;
+      max-width: 720px;
     }
 
-    .about-lead {
+    .about-text {
       font-family:
         Georgia,
         "Noto Serif KR",
         serif;
 
-      font-size: clamp(22px, 2.15vw, 32px);
-
-      line-height: 1.55;
-
-      letter-spacing: -0.035em;
-
-      margin-bottom: 25px;
-    }
-
-    .about-sub {
-      font-family:
-        Georgia,
-        "Noto Serif KR",
-        serif;
-
-      font-size: 16px;
+      font-size: clamp(17px, 1.5vw, 21px);
 
       line-height: 1.8;
 
-      color: #dddddd;
+      letter-spacing: -0.025em;
+
+      color: #eeeeee;
+
+      margin-bottom: 24px;
     }
 
+
+    /* ==============================
+       MORE LINK
+    ============================== */
+
+    .more-link {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 10px;
+
+      padding-bottom: 5px;
+
+      border-bottom: 1px solid currentColor;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      transition: opacity 0.2s ease;
+    }
+
+    .more-link .arrow {
+      display: inline-block;
+
+      transition: transform 0.25s ease;
+    }
+
+    .more-link:hover {
+      opacity: 0.65;
+    }
+
+    .more-link:hover .arrow {
+      transform: translateX(5px);
+    }
 
 
     /* ==============================
@@ -513,7 +534,7 @@
     .contact {
       background: #ffffff;
 
-      padding: 72px 8vw 55px;
+      padding: 68px 8vw 72px;
     }
 
     .contact-inner {
@@ -526,51 +547,37 @@
       grid-template-columns: 280px 1px 1fr;
 
       gap: 60px;
+
+      align-items: start;
     }
 
     .contact-line {
       width: 1px;
-      height: 165px;
+      height: 125px;
 
       background: #999999;
     }
 
     .contact-content {
-      padding-top: 2px;
+      max-width: 720px;
     }
 
-    .contact-email {
-      display: inline-block;
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size: clamp(23px, 2.4vw, 34px);
-
-      border-bottom: 1px solid #111111;
-
-      line-height: 1.15;
-
-      margin-bottom: 20px;
-    }
-
-    .contact-email:hover {
-      opacity: 0.55;
-    }
-
-    .contact-info {
+    .contact-text {
       font-family:
         Georgia,
         "Noto Serif KR",
         serif;
 
-      font-size: 14px;
+      font-size: clamp(17px, 1.5vw, 21px);
 
-      line-height: 1.85;
+      line-height: 1.8;
+
+      letter-spacing: -0.025em;
+
+      color: #222222;
+
+      margin-bottom: 24px;
     }
-
 
 
     /* ==============================
@@ -596,7 +603,6 @@
 
       letter-spacing: 0.22em;
     }
-
 
 
     /* ==============================
@@ -651,7 +657,6 @@
       }
 
     }
-
 
 
     /* ==============================
@@ -741,14 +746,16 @@
       }
 
 
+      /* ABOUT */
+
       .about {
-        padding: 65px 25px 75px;
+        padding: 58px 25px 62px;
       }
 
       .about-inner {
         grid-template-columns: 1fr;
 
-        gap: 32px;
+        gap: 28px;
       }
 
       .about-line {
@@ -756,24 +763,38 @@
         height: 1px;
       }
 
-      .about-lead {
-        font-size: 25px;
+      .about-text {
+        font-size: 17px;
+
+        margin-bottom: 21px;
       }
 
 
+      /* CONTACT */
+
       .contact {
-        padding: 65px 25px 50px;
+        padding: 58px 25px 62px;
       }
 
       .contact-inner {
         grid-template-columns: 1fr;
 
-        gap: 32px;
+        gap: 28px;
       }
 
       .contact-line {
         width: 100%;
         height: 1px;
+      }
+
+      .contact-text {
+        font-size: 17px;
+
+        margin-bottom: 21px;
+      }
+
+      .more-link {
+        font-size: 12px;
       }
 
 
@@ -790,7 +811,6 @@
       }
 
     }
-
 
 
     /* ==============================
@@ -826,8 +846,13 @@
         grid-template-columns: 90px 1fr;
       }
 
-      .contact-email {
-        font-size: 23px;
+      .about-text,
+      .contact-text {
+        font-size: 16px;
+      }
+
+      .more-link {
+        font-size: 11px;
       }
 
     }
@@ -923,15 +948,13 @@
           <div class="slider-track">
 
 
-
             <!-- 001 -->
 
-         <a
-  class="work-card"
-  href="games/fanmeeting.html"
-  aria-label="이세계 탐정 : 팬미팅 살인사건 상세 페이지"
->
-
+            <a
+              class="work-card"
+              href="games/fanmeeting.html"
+              aria-label="이세계 탐정 : 팬미팅 살인사건 상세 페이지"
+            >
 
               <div class="work-image">
 
@@ -944,7 +967,6 @@
 
 
               <div class="work-info">
-
 
                 <div class="work-heading">
 
@@ -960,7 +982,6 @@
 
 
                 <div class="work-meta">
-
 
                   <div class="meta-row">
 
@@ -987,7 +1008,6 @@
 
                   </div>
 
-
                 </div>
 
               </div>
@@ -995,16 +1015,13 @@
             </a>
 
 
-
-
             <!-- 002 -->
 
             <a
-  class="work-card"
-  href="games/soul-light.html"
-  aria-label="영혼의 빛이 머무는 자리 상세 페이지"
->
-
+              class="work-card"
+              href="games/soul-light.html"
+              aria-label="영혼의 빛이 머무는 자리 상세 페이지"
+            >
 
               <div class="work-image">
 
@@ -1017,7 +1034,6 @@
 
 
               <div class="work-info">
-
 
                 <div class="work-heading">
 
@@ -1033,7 +1049,6 @@
 
 
                 <div class="work-meta">
-
 
                   <div class="meta-row">
 
@@ -1060,7 +1075,6 @@
 
                   </div>
 
-
                 </div>
 
               </div>
@@ -1068,16 +1082,13 @@
             </a>
 
 
-
-
             <!-- 003 -->
 
             <a
-  class="work-card"
-  href="games/star-tears.html"
-  aria-label="별이 내린 눈물 상세 페이지"
->
-
+              class="work-card"
+              href="games/star-tears.html"
+              aria-label="별이 내린 눈물 상세 페이지"
+            >
 
               <div class="work-image">
 
@@ -1090,7 +1101,6 @@
 
 
               <div class="work-info">
-
 
                 <div class="work-heading">
 
@@ -1106,7 +1116,6 @@
 
 
                 <div class="work-meta">
-
 
                   <div class="meta-row">
 
@@ -1132,7 +1141,6 @@
                     </span>
 
                   </div>
-
 
                 </div>
 
@@ -1186,30 +1194,19 @@
         <div class="about-content">
 
 
-          <div class="about-lead">
-
-            STUDIO ROBOK은 이야기를 만들고,
-
-            <br>
-
-            그 이야기를 사람들이 직접 경험할 수 있는
-
-            <br>
-
-            게임으로 만듭니다.
-
+          <div class="about-text">
+            머더미스터리를 자체적으로 제작하며,
+            제조 서비스를 제공합니다.
           </div>
 
 
-          <div class="about-sub">
-
-            머더미스터리와 내러티브 게임을 중심으로
-
-            <br>
-
-            새로운 형태의 이야기를 연구합니다.
-
-          </div>
+          <a
+            class="more-link"
+            href="about.html"
+          >
+            스튜디오 로복의 자세한 이야기가 궁금하신가요?
+            <span class="arrow">→</span>
+          </a>
 
 
         </div>
@@ -1246,32 +1243,19 @@
         <div class="contact-content">
 
 
-          <a
-            class="contact-email"
-            href="mailto:robok@studiorobok.com"
-          >
-            robok@studiorobok.com
-          </a>
-
-
-          <div class="contact-info">
-
-            STUDIO ROBOK
-
-            <br>
-
-            대표 정지복
-
-            <br>
-
-            경기도 평택시 포승읍
-            포승산단로40번길 15-21
-
-            <br>
-
-            평택오션센트럴비즈 A동 2442호
-
+          <div class="contact-text">
+            제조 서비스 외에, 브랜드 협업 및
+            콘텐츠 관련 협업도 진행합니다.
           </div>
+
+
+          <a
+            class="more-link"
+            href="contact.html"
+          >
+            머더미스터리 제조, 브랜드 협업, 콘텐츠 관련 문의가 필요하신가요?
+            <span class="arrow">→</span>
+          </a>
 
 
         </div>
