@@ -563,19 +563,96 @@
     .closing-grid {
       display: grid;
 
-      grid-template-columns: 1fr 1.5fr;
+      grid-template-columns: 0.8fr 1.2fr;
 
-      gap: 70px;
+      gap: 75px;
 
-      align-items: start;
+      align-items: center;
     }
 
-    .closing-label {
+
+    /* CLOSING FANART */
+
+    .closing-art {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    .closing-art img {
+      display: block;
+
+      width: 100%;
+      max-width: 430px;
+      height: auto;
+
+      object-fit: contain;
+    }
+
+    .closing-art-caption {
+      width: 100%;
+      max-width: 430px;
+
+      margin-top: 18px;
+      padding-top: 13px;
+
+      border-top: 1px solid #999999;
+
+      display: flex;
+      justify-content: space-between;
+
+      gap: 20px;
+
       font-size: 10px;
 
-      letter-spacing: 0.3em;
+      letter-spacing: 0.18em;
+    }
 
+    .closing-art-caption span {
       color: #777777;
+    }
+
+
+    /* CLOSING TEXT */
+
+    .closing-content {
+      width: 100%;
+
+      max-width: 660px;
+    }
+
+    .closing-title {
+      margin-bottom: 38px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(27px, 2.5vw, 35px);
+
+      font-weight: 400;
+
+      line-height: 1.5;
+
+      letter-spacing: -0.045em;
+    }
+
+    .closing-title::after {
+      content: "";
+
+      display: block;
+
+      width: 45px;
+      height: 1px;
+
+      margin-top: 25px;
+
+      background: #111111;
     }
 
     .closing-copy {
@@ -584,19 +661,59 @@
         "Noto Serif KR",
         serif;
 
-      font-size: clamp(24px, 2.6vw, 38px);
+      font-size: clamp(16px, 1.3vw, 19px);
 
-      line-height: 1.65;
+      line-height: 2;
 
-      letter-spacing: -0.045em;
+      letter-spacing: -0.025em;
+
+      color: #333333;
+    }
+
+    .closing-copy p {
+      margin-bottom: 32px;
     }
 
     .closing-copy strong {
+      color: #111111;
+
       font-weight: 500;
     }
 
+
+    /* FINAL HIGHLIGHT */
+
+    .closing-highlight {
+      margin: 55px 0 45px;
+
+      padding: 32px 0;
+
+      border-top: 1px solid #999999;
+      border-bottom: 1px solid #999999;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(20px, 1.85vw, 26px);
+
+      line-height: 1.8;
+
+      letter-spacing: -0.035em;
+
+      color: #111111;
+    }
+
+    .closing-highlight strong {
+      font-weight: 500;
+    }
+
+
+    /* SIGNATURE */
+
     .signature {
-      margin-top: 55px;
+      margin-top: 50px;
 
       padding-top: 24px;
 
@@ -652,6 +769,12 @@
         grid-template-columns: 200px 1px 1fr;
 
         gap: 40px;
+      }
+
+      .closing-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 45px;
       }
 
     }
@@ -796,11 +919,40 @@
       .closing-grid {
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 50px;
+      }
+
+      .closing-art {
+        align-items: flex-start;
+      }
+
+      .closing-art img,
+      .closing-art-caption {
+        max-width: 420px;
+      }
+
+      .closing-content {
+        max-width: 100%;
+      }
+
+      .closing-title {
+        font-size: 27px;
+
+        margin-bottom: 32px;
       }
 
       .closing-copy {
-        font-size: 27px;
+        font-size: 16px;
+
+        line-height: 1.95;
+      }
+
+      .closing-highlight {
+        margin: 45px 0 40px;
+
+        padding: 30px 0;
+
+        font-size: 22px;
       }
 
 
@@ -861,8 +1013,16 @@
         font-size: 28px;
       }
 
+      .closing-title {
+        font-size: 25px;
+      }
+
       .closing-copy {
-        font-size: 24px;
+        font-size: 15px;
+      }
+
+      .closing-highlight {
+        font-size: 20px;
       }
 
     }
@@ -1079,19 +1239,22 @@
           </p>
 
 
-            전 정했습니다.
+          전 정했습니다.
 
-            <br>
+          <br>
 
-            <strong>
-              이걸 내 새로운 길로 삼자!
-            </strong>
-  <br>  <br>
+          <strong>
+            이걸 내 새로운 길로 삼자!
+          </strong>
+
+          <br><br>
+
 
           <!-- CHAPTER 2 -->
 
           <div class="chapter-title">
-            그래서,<br>머더미스터리를 만들기 시작했습니다.
+            그래서,<br>
+            머더미스터리를 만들기 시작했습니다.
           </div>
 
 
@@ -1119,8 +1282,11 @@
           <p>
             그렇게 다짐했습니다.
           </p>
-              하지만, 저흰 최선을 다해 하나의 작품을
-              완성해 낸 뒤 <br>
+
+
+          하지만, 저흰 최선을 다해 하나의 작품을
+          완성해 낸 뒤 <br>
+
           <strong>
             절망하고 말았습니다.
           </strong>
@@ -1130,12 +1296,12 @@
 
           <div class="chapter-title">
 
-<br><br><br>
-              <strong>
-                ‘패키지 제조’라는,
-                <br>어마어마하게 높은 벽에 부딪힌 겁니다.
-              </strong>
+            <br><br><br>
 
+            <strong>
+              ‘패키지 제조’라는,<br>
+              어마어마하게 높은 벽에 부딪힌 겁니다.
+            </strong>
 
           </div>
 
@@ -1169,21 +1335,22 @@
           <div class="mission">
 
 
-
             <div class="mission-main">
 
               그래서 저흰,<br>
               이것도 해보기로 했습니다.
-     </div>
-              <br><br>
 
-              <strong>
-                국내에서 합리적인 가격으로<br>
-                머더미스 패키지를 제작할 수 있는<br>
-                유일한 회사가 되자!
-              </strong>
+            </div>
 
-       
+
+            <br><br>
+
+
+            <strong>
+              국내에서 합리적인 가격으로<br>
+              머더미스 패키지를 제작할 수 있는<br>
+              유일한 회사가 되자!
+            </strong>
 
 
             <div class="mission-sub">
@@ -1225,41 +1392,88 @@
       <div class="closing-grid">
 
 
+        <!-- SECOND FANART -->
+
+        <div class="closing-art">
+
+
+          <img
+            src="robok-mask.png"
+            alt="가면을 들고 있는 로복 팬아트"
+          >
+
+
+          <div class="closing-art-caption">
+
+            <strong>
+              ROBOK
+            </strong>
+
+            <span>
+              CREATE / MAKE
+            </span>
+
+          </div>
+
+
+        </div>
 
 
 
-        <div>
+        <!-- FINAL MESSAGE -->
+
+        <div class="closing-content">
+
+
+          <div class="closing-title">
+            그래서 스튜디오 로복은 도전합니다.
+          </div>
 
 
           <div class="closing-copy">
 
-            그래서 스튜디오 로복은 도전합니다<br>
-            작가분들이, 딱 주문받은 만큼만!<br>
-            합리적인 가격으로 패키지를 제조할 수 있도록 돕자고.<br>
 
-            제조 시간이 오래 걸릴지라도,<br>
-            한땀한땀 정성스레 만들어,<br>
-            작가분들이 작품에 쏟아부은 정성과 노력이<br>
-            받는 분들께 전달되도록 하자고.<br><br>
-            
-            한국 머더미스터리 시장과<br>
-            머더미스터리를 사랑하는 모든 분들을 위해
+            <p>
+              작가분들이, 딱 주문받은 만큼만!<br>
+              합리적인 가격으로 패키지를 제조할 수 있도록 돕자고.
+            </p>
 
-            <br><br>
 
-            <strong>
-              겁 없이 뛰어들어 보려고 합니다.
-            </strong>
+            <p>
+              제조 시간이 오래 걸릴지라도,<br>
+              한땀한땀 정성스레 만들어,<br>
+              작가분들이 작품에 쏟아부은 정성과 노력이<br>
+              받는 분들께 전달되도록 하자고.
+            </p>
 
-            <br><br>
 
-            열심히 하겠습니다!
 
-            <br>
+            <div class="closing-highlight">
 
-            감사합니다.
+              한국 머더미스터리 시장과<br>
+              머더미스터리를 사랑하는 모든 분들을 위해
+
+              <br><br>
+
+              <strong>
+                겁 없이 뛰어들어 보려고 합니다.
+              </strong>
+
+            </div>
+
+
+            <p>
+              열심히 하겠습니다!
+            </p>
+
+
+            <p>
+              감사합니다.
+            </p>
+
 
           </div>
+
 
 
           <div class="signature">
