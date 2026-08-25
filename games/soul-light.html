@@ -49,7 +49,6 @@
     }
 
 
-
     /* ========================================
        HEADER
     ======================================== */
@@ -64,7 +63,6 @@
       padding: 0 5vw;
 
       background: #ffffff;
-
       border-bottom: 1px solid #222222;
 
       position: relative;
@@ -125,7 +123,6 @@
     }
 
 
-
     /* ========================================
        GAME HERO
     ======================================== */
@@ -137,7 +134,6 @@
 
       padding: 72px 30px 95px;
     }
-
 
 
     /* CATEGORY */
@@ -159,7 +155,7 @@
 
       letter-spacing: 0.22em;
 
-      color: #176b67;
+      color: #6f42a5;
     }
 
     .game-category::after {
@@ -170,9 +166,8 @@
       width: 45px;
       height: 1px;
 
-      background: #176b67;
+      background: #6f42a5;
     }
-
 
 
     /* TITLE */
@@ -197,7 +192,6 @@
     }
 
 
-
     /* ========================================
        PACKAGE + INFO
     ======================================== */
@@ -211,7 +205,6 @@
 
       align-items: center;
     }
-
 
 
     /* PACKAGE */
@@ -260,7 +253,6 @@
     }
 
 
-
     /* GAME INFO */
 
     .game-info {
@@ -281,7 +273,6 @@
 
     .info-label {
       font-size: 12px;
-
       color: #777777;
     }
 
@@ -297,13 +288,12 @@
     }
 
     .difficulty {
-      color: #176b67;
+      color: #6f42a5;
 
       letter-spacing: 0.12em;
 
       white-space: nowrap;
     }
-
 
 
     /* ========================================
@@ -330,7 +320,6 @@
 
       align-items: start;
     }
-
 
 
     /* LABEL */
@@ -376,23 +365,26 @@
     }
 
 
-
     /* VERTICAL LINE */
 
     .about-line {
       width: 1px;
-      min-height: 620px;
+      min-height: 690px;
 
       background: #50475b;
     }
 
 
-
-    /* COPY */
+    /* ========================================
+       ABOUT COPY
+    ======================================== */
 
     .about-copy {
-      max-width: 720px;
+      max-width: 760px;
     }
+
+
+    /* 대한민국 용진시. */
 
     .about-opening {
       font-family:
@@ -400,16 +392,19 @@
         "Noto Serif KR",
         serif;
 
-      font-size: clamp(26px, 3vw, 43px);
+      font-size: clamp(31px, 3.4vw, 48px);
 
       font-weight: 400;
 
-      line-height: 1.55;
+      line-height: 1.45;
 
       letter-spacing: -0.045em;
 
-      margin-bottom: 48px;
+      margin-bottom: 35px;
     }
+
+
+    /* 보라색 구분선 */
 
     .accent-line {
       display: block;
@@ -417,10 +412,11 @@
       width: 55px;
       height: 2px;
 
-      margin-bottom: 45px;
+      margin-bottom: 42px;
 
-      background: #2d918b;
+      background: #9467c6;
     }
+
 
     .about-body {
       font-family:
@@ -432,31 +428,37 @@
 
       line-height: 2;
 
-      color: #d8dddd;
+      color: #d8d4dc;
     }
 
     .about-body p + p {
       margin-top: 25px;
     }
 
+    .about-body strong {
+      color: #ffffff;
+      font-weight: 500;
+    }
 
 
-    /* SOUL QUOTE */
+    /* ========================================
+       SOUL QUOTE
+    ======================================== */
 
     .soul-quote {
-      margin: 60px 0;
+      margin: 58px 0;
 
-      padding: 35px 0;
+      padding: 36px 0;
 
-      border-top: 1px solid #2d918b;
-      border-bottom: 1px solid #2d918b;
+      border-top: 1px solid #9467c6;
+      border-bottom: 1px solid #9467c6;
 
       font-family:
         Georgia,
         "Noto Serif KR",
         serif;
 
-      font-size: clamp(25px, 3vw, 39px);
+      font-size: clamp(27px, 3vw, 40px);
 
       font-weight: 400;
 
@@ -464,12 +466,14 @@
 
       text-align: center;
 
-      color: #ffffff;
+      /* 영혼의 대사만 붉은색 */
+      color: #d45a62;
     }
 
 
-
-    /* QUESTIONS */
+    /* ========================================
+       QUESTIONS
+    ======================================== */
 
     .questions {
       margin-top: 45px;
@@ -480,8 +484,9 @@
     }
 
 
-
-    /* FINAL COPY */
+    /* ========================================
+       FINAL COPY
+    ======================================== */
 
     .final-copy {
       margin-top: 55px !important;
@@ -491,11 +496,15 @@
         "Noto Serif KR",
         serif;
 
-      font-size: clamp(20px, 2vw, 27px);
+      font-size: clamp(20px, 1.8vw, 25px);
 
       line-height: 1.8;
 
       color: #ffffff !important;
+    }
+
+    .final-first-line {
+      white-space: nowrap;
     }
 
     .game-name {
@@ -517,9 +526,8 @@
       width: 100%;
       height: 1px;
 
-      background: #2d918b;
+      background: #9467c6;
     }
-
 
 
     /* ========================================
@@ -570,12 +578,11 @@
     }
 
     .back-link:hover .back-arrow {
-      background: #176b67;
-      border-color: #176b67;
+      background: #6f42a5;
+      border-color: #6f42a5;
 
       color: #ffffff;
     }
-
 
 
     /* ========================================
@@ -601,7 +608,6 @@
 
       letter-spacing: 0.22em;
     }
-
 
 
     /* ========================================
@@ -635,8 +641,11 @@
         gap: 40px;
       }
 
-    }
+      .final-first-line {
+        white-space: normal;
+      }
 
+    }
 
 
     /* ========================================
@@ -665,6 +674,7 @@
       }
 
 
+      /* HERO */
 
       .game-hero {
         padding:
@@ -686,6 +696,7 @@
       }
 
 
+      /* PACKAGE + INFO */
 
       .game-main {
         display: flex;
@@ -726,6 +737,7 @@
       }
 
 
+      /* ABOUT */
 
       .game-about {
         padding:
@@ -752,12 +764,14 @@
         height: 1px;
 
         margin-bottom: 40px;
+
+        background: #50475b;
       }
 
       .about-opening {
-        font-size: 29px;
+        font-size: 31px;
 
-        margin-bottom: 35px;
+        margin-bottom: 30px;
       }
 
       .accent-line {
@@ -770,6 +784,9 @@
         line-height: 1.9;
       }
 
+
+      /* QUOTE */
+
       .soul-quote {
         margin: 45px 0;
 
@@ -778,11 +795,19 @@
         font-size: 27px;
       }
 
+
+      /* FINAL */
+
       .final-copy {
-        font-size: 21px;
+        font-size: 20px;
+      }
+
+      .final-first-line {
+        white-space: normal;
       }
 
 
+      /* BOTTOM */
 
       .bottom-nav {
         padding:
@@ -792,6 +817,7 @@
       }
 
 
+      /* FOOTER */
 
       footer {
         margin: 0 25px;
@@ -806,7 +832,6 @@
       }
 
     }
-
 
 
     /* ========================================
@@ -849,11 +874,15 @@
       }
 
       .about-opening {
-        font-size: 25px;
+        font-size: 28px;
       }
 
       .soul-quote {
         font-size: 24px;
+      }
+
+      .final-copy {
+        font-size: 18px;
       }
 
     }
@@ -1034,12 +1063,10 @@
         <div class="about-copy">
 
 
+          <!-- OPENING -->
+
           <div class="about-opening">
-
-            대한민국 용진시.<br>
-            한때 대한민국 제2의 수도라 불렸지만,<br>
-            지금은 죽어가는 상권이 늘어가는 도시.
-
+            대한민국 용진시.
           </div>
 
 
@@ -1050,7 +1077,13 @@
 
 
             <p>
-              하지만 비례대표로 선출된 젊은 국회의원
+              한때 대한민국 제2의 수도라 불렸지만,<br>
+              지금은 죽어가는 상권이 늘어가는 도시.
+            </p>
+
+
+            <p>
+              하지만, 비례대표로 선출된 젊은 국회의원
               <strong>최철진</strong> 덕분에
               용진시는 점점 발전했고,
               다시 호황기를 맞이하게 됐다.
@@ -1058,33 +1091,31 @@
 
 
             <p>
-              그러던 어느 날,
-              낙후지역에 있는 <strong>‘용진빌라’</strong>에서
-              의문의 살인사건이 발생한다.
-            </p>
-
-
-            <p>
-              놀랍게도 그곳에 국회의원 최철진이
+              하지만, 낙후지역에 있는
+              <strong>‘용진빌라’</strong>에서
+              의문의 살인사건이 발생하고,
+              놀랍게도 그곳에 국회의원인 최철진이
               헐레벌떡 찾아온다.
             </p>
 
 
             <p>
-              그리고 더 놀라운 일이 벌어진다.
+              더 놀라운 점은,<br>
+              죽은 <strong>‘김도욱’의 영혼</strong>이
+              보이기 시작했다는 것이다.
             </p>
 
+
+
+            <!-- SOUL QUOTE -->
 
             <div class="soul-quote">
               “제가 보이시나요...?”
             </div>
 
 
-            <p>
-              죽은 <strong>‘김도욱’의 영혼</strong>이
-              보이기 시작한 것이다.
-            </p>
 
+            <!-- QUESTIONS -->
 
             <div class="questions">
 
@@ -1097,6 +1128,9 @@
             </div>
 
 
+
+            <!-- FINAL -->
+
             <p class="final-copy">
 
               피해자의 영혼,<br>
@@ -1104,8 +1138,13 @@
 
               <br><br>
 
-              당신들은,
-              이 <span class="game-name">《영혼의 빛이 머무는 자리》</span>에서
+              <span class="final-first-line">
+                당신들은, 이
+                <span class="game-name">《영혼의 빛이 머무는 자리》</span>에서
+              </span>
+
+              <br>
+
               사건의 진상을 밝혀낼 수 있을까?
 
             </p>
