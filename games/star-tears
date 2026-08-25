@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>별이 내린 눈물 | STUDIO ROBOK</title>
+
+  <meta
+    name="description"
+    content="1944년 독일 제7 연구소. 공간이동 기술 벨 시스템과 연구소장의 죽음을 둘러싼 미스터리, 별이 내린 눈물."
+  >
+
+  <style>
+
+    /* ========================================
+       RESET
+    ======================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+
+      font-family:
+        Pretendard,
+        "Noto Sans KR",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
+    header {
+      height: 92px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 5vw;
+
+      background: #ffffff;
+      border-bottom: 1px solid #222222;
+
+      position: relative;
+      z-index: 100;
+    }
+
+    .logo {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      display: block;
+
+      width: 118px;
+      max-height: 68px;
+
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      gap: 46px;
+
+      font-size: 11px;
+      font-weight: 500;
+
+      letter-spacing: 0.28em;
+    }
+
+    nav a {
+      position: relative;
+      padding: 8px 0;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 2px;
+
+      width: 0;
+      height: 1px;
+
+      background: #b58a46;
+
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+
+    /* ========================================
+       GAME HERO
+    ======================================== */
+
+    .game-hero {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      padding: 72px 30px 95px;
+    }
+
+
+    /* CATEGORY */
+
+    .game-category {
+      display: flex;
+      align-items: center;
+
+      gap: 15px;
+
+      margin-bottom: 20px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 11px;
+
+      letter-spacing: 0.22em;
+
+      color: #9a7136;
+    }
+
+    .game-category::after {
+      content: "";
+
+      display: block;
+
+      width: 45px;
+      height: 1px;
+
+      background: #b58a46;
+    }
+
+
+    /* TITLE */
+
+    .game-title {
+      max-width: 900px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(38px, 5vw, 72px);
+
+      font-weight: 400;
+
+      line-height: 1.18;
+
+      letter-spacing: -0.055em;
+
+      margin-bottom: 58px;
+    }
+
+
+    /* ========================================
+       PACKAGE + INFO
+    ======================================== */
+
+    .game-main {
+      display: grid;
+
+      grid-template-columns: 1.35fr 0.65fr;
+
+      gap: 85px;
+
+      align-items: center;
+    }
+
+
+    /* PACKAGE */
+
+    .package-area {
+      min-height: 560px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .package-area::before {
+      content: "";
+
+      position: absolute;
+
+      width: 440px;
+      height: 440px;
+
+      border: 1px solid #eee7dc;
+      border-radius: 50%;
+
+      z-index: -1;
+    }
+
+    .package-area img {
+      display: block;
+
+      width: 100%;
+      height: 520px;
+
+      object-fit: contain;
+
+      transition:
+        transform 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .package-area:hover img {
+      transform: translateY(-7px) scale(1.03);
+    }
+
+
+    /* GAME INFO */
+
+    .game-info {
+      border-top: 1px solid #111111;
+    }
+
+    .info-row {
+      display: grid;
+
+      grid-template-columns: 125px 1fr;
+
+      gap: 20px;
+
+      padding: 18px 0;
+
+      border-bottom: 1px solid #d5d5d5;
+    }
+
+    .info-label {
+      font-size: 12px;
+      color: #777777;
+    }
+
+    .info-value {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 15px;
+
+      line-height: 1.5;
+    }
+
+    .difficulty {
+      color: #9a7136;
+
+      letter-spacing: 0.12em;
+
+      white-space: nowrap;
+    }
+
+
+    /* ========================================
+       ABOUT GAME
+    ======================================== */
+
+    .game-about {
+      background: #110f0c;
+      color: #ffffff;
+
+      padding: 120px 8vw 135px;
+    }
+
+    .about-inner {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: 280px 1px 1fr;
+
+      gap: 60px;
+
+      align-items: start;
+    }
+
+
+    /* LABEL */
+
+    .section-label {
+      padding-top: 7px;
+
+      font-size: 11px;
+
+      letter-spacing: 0.3em;
+
+      color: #d3cec5;
+    }
+
+    .section-label span {
+      display: block;
+
+      margin-top: 8px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 20px;
+
+      letter-spacing: -0.03em;
+
+      color: #ffffff;
+    }
+
+    .section-label::after {
+      content: "";
+
+      display: block;
+
+      width: 24px;
+      height: 2px;
+
+      margin-top: 28px;
+
+      background: #b58a46;
+    }
+
+
+    /* VERTICAL LINE */
+
+    .about-line {
+      width: 1px;
+      min-height: 900px;
+
+      background: #514a3f;
+    }
+
+
+    /* ========================================
+       ABOUT COPY
+    ======================================== */
+
+    .about-copy {
+      max-width: 760px;
+    }
+
+
+    /* 1944년 */
+
+    .about-opening {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(34px, 4vw, 55px);
+
+      font-weight: 400;
+
+      line-height: 1.4;
+
+      letter-spacing: -0.045em;
+
+      margin-bottom: 35px;
+    }
+
+
+    .accent-line {
+      display: block;
+
+      width: 55px;
+      height: 2px;
+
+      margin-bottom: 42px;
+
+      background: #b58a46;
+    }
+
+
+    .about-body {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(16px, 1.35vw, 19px);
+
+      line-height: 2;
+
+      color: #ddd9d2;
+    }
+
+    .about-body p + p {
+      margin-top: 25px;
+    }
+
+    .about-body strong {
+      color: #ffffff;
+
+      font-weight: 500;
+    }
+
+
+    /* ========================================
+       BELL SYSTEM
+    ======================================== */
+
+    .bell-system {
+      margin: 48px 0;
+
+      padding: 30px 0;
+
+      border-top: 1px solid #514a3f;
+      border-bottom: 1px solid #514a3f;
+    }
+
+    .bell-system-label {
+      display: block;
+
+      margin-bottom: 12px;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: 10px;
+
+      letter-spacing: 0.28em;
+
+      color: #b58a46;
+    }
+
+    .bell-system-copy {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(20px, 2vw, 27px);
+
+      line-height: 1.75;
+
+      color: #ffffff;
+    }
+
+
+    /* ========================================
+       RUMOR QUOTE
+    ======================================== */
+
+    .rumor-quote {
+      margin: 58px 0;
+
+      padding: 36px 20px;
+
+      border-top: 1px solid #b58a46;
+      border-bottom: 1px solid #b58a46;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(26px, 3vw, 39px);
+
+      font-weight: 400;
+
+      letter-spacing: -0.035em;
+
+      text-align: center;
+
+      color: #d6b477;
+    }
+
+
+    /* ========================================
+       INCIDENT
+    ======================================== */
+
+    .incident-divider {
+      width: 100%;
+      height: 1px;
+
+      margin: 70px 0 50px;
+
+      background: #514a3f;
+    }
+
+    .incident-date {
+      margin-bottom: 32px !important;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(21px, 2.2vw, 29px);
+
+      line-height: 1.7;
+
+      color: #ffffff !important;
+    }
+
+    .incident-date strong {
+      position: relative;
+
+      display: inline-block;
+
+      font-weight: 500;
+    }
+
+    .incident-date strong::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -5px;
+
+      width: 100%;
+      height: 1px;
+
+      background: #b58a46;
+    }
+
+
+    /* ========================================
+       FINAL COPY
+    ======================================== */
+
+    .final-copy {
+      margin-top: 50px !important;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(20px, 2vw, 27px);
+
+      line-height: 1.8;
+
+      color: #ffffff !important;
+    }
+
+    .final-copy strong {
+      color: #d6b477;
+
+      font-weight: 500;
+    }
+
+
+    /* ========================================
+       BOTTOM NAVIGATION
+    ======================================== */
+
+    .bottom-nav {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      padding: 70px 30px 85px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 15px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 12px;
+
+      letter-spacing: 0.18em;
+    }
+
+    .back-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 40px;
+      height: 40px;
+
+      border: 1px solid #111111;
+      border-radius: 50%;
+
+      font-size: 18px;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .back-link:hover .back-arrow {
+      background: #b58a46;
+      border-color: #b58a46;
+
+      color: #ffffff;
+    }
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      max-width: 1320px;
+
+      margin: 0 auto;
+
+      border-top: 1px solid #777777;
+
+      padding: 28px 3vw 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.22em;
+    }
+
+
+    /* ========================================
+       TABLET
+    ======================================== */
+
+    @media (max-width: 1000px) {
+
+      .game-main {
+        gap: 45px;
+
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+
+      .package-area {
+        min-height: 480px;
+      }
+
+      .package-area img {
+        height: 450px;
+      }
+
+      .package-area::before {
+        width: 370px;
+        height: 370px;
+      }
+
+      .about-inner {
+        grid-template-columns: 210px 1px 1fr;
+
+        gap: 40px;
+      }
+
+    }
+
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media (max-width: 768px) {
+
+      header {
+        height: 78px;
+
+        padding: 0 20px;
+      }
+
+      .logo img {
+        width: 94px;
+        max-height: 56px;
+      }
+
+      nav {
+        gap: 15px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.17em;
+      }
+
+
+      /* HERO */
+
+      .game-hero {
+        padding:
+          52px
+          25px
+          70px;
+      }
+
+      .game-category {
+        font-size: 9px;
+
+        margin-bottom: 16px;
+      }
+
+      .game-title {
+        font-size: 38px;
+
+        margin-bottom: 35px;
+      }
+
+
+      /* PACKAGE + INFO */
+
+      .game-main {
+        display: flex;
+        flex-direction: column;
+
+        gap: 35px;
+      }
+
+      .package-area {
+        width: 100%;
+
+        min-height: 390px;
+      }
+
+      .package-area img {
+        height: 380px;
+      }
+
+      .package-area:hover img {
+        transform: translateY(-5px) scale(1.03);
+      }
+
+      .package-area::before {
+        width: 310px;
+        height: 310px;
+      }
+
+      .game-info {
+        width: 100%;
+      }
+
+      .info-row {
+        grid-template-columns: 110px 1fr;
+
+        padding: 16px 0;
+      }
+
+
+      /* ABOUT */
+
+      .game-about {
+        padding:
+          80px
+          25px
+          90px;
+      }
+
+      .about-inner {
+        display: block;
+      }
+
+      .section-label {
+        margin-bottom: 28px;
+      }
+
+      .section-label::after {
+        margin-top: 20px;
+      }
+
+      .about-line {
+        width: 100%;
+        min-height: 0;
+        height: 1px;
+
+        margin-bottom: 40px;
+      }
+
+      .about-opening {
+        font-size: 34px;
+
+        margin-bottom: 30px;
+      }
+
+      .accent-line {
+        margin-bottom: 35px;
+      }
+
+      .about-body {
+        font-size: 16px;
+
+        line-height: 1.9;
+      }
+
+
+      /* BELL */
+
+      .bell-system {
+        margin: 42px 0;
+
+        padding: 26px 0;
+      }
+
+      .bell-system-copy {
+        font-size: 21px;
+      }
+
+
+      /* RUMOR */
+
+      .rumor-quote {
+        margin: 45px 0;
+
+        padding: 28px 10px;
+
+        font-size: 26px;
+      }
+
+
+      /* INCIDENT */
+
+      .incident-divider {
+        margin: 55px 0 40px;
+      }
+
+      .incident-date {
+        font-size: 22px;
+      }
+
+      .final-copy {
+        font-size: 21px;
+      }
+
+
+      /* BOTTOM */
+
+      .bottom-nav {
+        padding:
+          55px
+          25px
+          65px;
+      }
+
+
+      /* FOOTER */
+
+      footer {
+        margin: 0 25px;
+
+        padding-left: 0;
+        padding-right: 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+
+    }
+
+
+    /* ========================================
+       SMALL MOBILE
+    ======================================== */
+
+    @media (max-width: 430px) {
+
+      nav {
+        gap: 9px;
+
+        font-size: 7px;
+      }
+
+      .logo img {
+        width: 88px;
+      }
+
+      .game-title {
+        font-size: 33px;
+      }
+
+      .package-area {
+        min-height: 330px;
+      }
+
+      .package-area img {
+        height: 325px;
+      }
+
+      .package-area::before {
+        width: 265px;
+        height: 265px;
+      }
+
+      .info-row {
+        grid-template-columns: 100px 1fr;
+
+        gap: 10px;
+      }
+
+      .about-opening {
+        font-size: 31px;
+      }
+
+      .bell-system-copy {
+        font-size: 19px;
+      }
+
+      .rumor-quote {
+        font-size: 23px;
+      }
+
+      .incident-date {
+        font-size: 20px;
+      }
+
+      .final-copy {
+        font-size: 19px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ========================================
+       HEADER
+  ========================================= -->
+
+  <header>
+
+    <a
+      class="logo"
+      href="../index.html"
+      aria-label="STUDIO ROBOK 홈"
+    >
+      <img
+        src="../studio-robok-logo.png"
+        alt="STUDIO ROBOK"
+      >
+    </a>
+
+
+    <nav>
+
+      <a href="../index.html#games">
+        GAMES
+      </a>
+
+      <a href="../index.html#about">
+        ABOUT
+      </a>
+
+      <a href="../index.html#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- ========================================
+         GAME HERO
+    ========================================= -->
+
+    <section class="game-hero">
+
+
+      <div class="game-category">
+        003 / MURDER MYSTERY
+      </div>
+
+
+      <h1 class="game-title">
+        별이 내린 눈물
+      </h1>
+
+
+
+      <div class="game-main">
+
+
+        <!-- PACKAGE -->
+
+        <div class="package-area">
+
+          <img
+            src="../star-tears.png"
+            alt="별이 내린 눈물 패키지"
+          >
+
+        </div>
+
+
+
+        <!-- INFORMATION -->
+
+        <div class="game-info">
+
+
+          <div class="info-row">
+
+            <div class="info-label">
+              제작
+            </div>
+
+            <div class="info-value">
+              4ON
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-label">
+              플레이 인원
+            </div>
+
+            <div class="info-value">
+              6인
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-label">
+              플레이 타임
+            </div>
+
+            <div class="info-value">
+              120분
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-label">
+              난이도
+            </div>
+
+            <div class="info-value difficulty">
+              ★★★☆☆
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         ABOUT THE GAME
+    ========================================= -->
+
+    <section class="game-about">
+
+
+      <div class="about-inner">
+
+
+        <div class="section-label">
+
+          ABOUT THE GAME
+
+          <span>
+            작품 소개
+          </span>
+
+        </div>
+
+
+        <div class="about-line"></div>
+
+
+        <div class="about-copy">
+
+
+          <!-- OPENING -->
+
+          <div class="about-opening">
+            1944년,
+          </div>
+
+
+          <span class="accent-line"></span>
+
+
+          <div class="about-body">
+
+
+            <p>
+              독일 정부의 지원을 받는 <strong>제7 연구소.</strong><br>
+              연구소장 클라우스는 인류 역사를 바꿀 기술을 개발했다.
+            </p>
+
+
+
+            <!-- BELL SYSTEM -->
+
+            <div class="bell-system">
+
+              <span class="bell-system-label">
+                BELL SYSTEM
+              </span>
+
+              <div class="bell-system-copy">
+                인간을 분해해 이동시킨 뒤,<br>
+                다시 재조립하는 공간이동 기술
+                <strong>‘벨 시스템’.</strong>
+              </div>
+
+            </div>
+
+
+
+            <p>
+              연구소는 보상을 약속하고
+              이 기술의 임상시험 실험체를 모집했다.
+            </p>
+
+
+            <p>
+              이에 사람들은 거액의 보상에 혹해
+              자발적으로 실험에 지원했다.
+            </p>
+
+
+            <p>
+              연구소는 그들을 <strong>‘노커’</strong>라고 불렀다.
+            </p>
+
+
+            <p>
+              그리고 얼마 후,<br>
+              연구소에는 흉흉한 소문이 돌기 시작했다.
+            </p>
+
+
+
+            <!-- RUMOR -->
+
+            <div class="rumor-quote">
+              “퇴소한 사람은 돌아오지 않는다.”
+            </div>
+
+
+
+            <!-- INCIDENT -->
+
+            <div class="incident-divider"></div>
+
+
+            <p class="incident-date">
+              <strong>1944년 4월 30일, 오후 3시 30분.</strong>
+            </p>
+
+
+            <p>
+              연구소 전체에 긴급 방송이 울려 퍼졌다.
+            </p>
+
+
+            <p>
+              그 내용은 충격적이었다.
+            </p>
+
+
+            <p>
+              연구소장 <strong>클라우스</strong>가
+              자신의 방에서 시신으로 발견된 것이다.
+            </p>
+
+
+
+            <!-- FINAL -->
+
+            <p class="final-copy">
+
+              사건 직전,<br>
+              행방이 묘연했던 6명의 인물.
+
+              <br><br>
+
+              <strong>범인은 이들 중 한 명이다.</strong>
+
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         BACK
+    ========================================= -->
+
+    <section class="bottom-nav">
+
+      <a
+        class="back-link"
+        href="../index.html#games"
+      >
+
+        <span class="back-arrow">
+          ←
+        </span>
+
+        <span>
+          ALL GAMES
+        </span>
+
+      </a>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div>
+      STUDIO ROBOK
+    </div>
+
+    <div>
+      © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
