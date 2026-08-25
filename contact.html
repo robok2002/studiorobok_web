@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CONTACT | STUDIO ROBOK</title>
+
+  <meta
+    name="description"
+    content="STUDIO ROBOK 머더미스터리 패키지 제조 문의 및 브랜드 협업, 콘텐츠 제안 안내."
+  >
+
+  <style>
+
+    /* ========================================
+       RESET
+    ======================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+
+      font-family:
+        Pretendard,
+        "Noto Sans KR",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
+    header {
+      height: 92px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 5vw;
+
+      background: #ffffff;
+      border-bottom: 1px solid #222222;
+    }
+
+    .logo {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      display: block;
+
+      width: 118px;
+      max-height: 68px;
+
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      gap: 46px;
+
+      font-size: 11px;
+      font-weight: 500;
+
+      letter-spacing: 0.28em;
+    }
+
+    nav a {
+      position: relative;
+
+      padding: 8px 0;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 2px;
+
+      width: 0;
+      height: 1px;
+
+      background: #111111;
+
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+
+    /* ========================================
+       PAGE
+    ======================================== */
+
+    .contact-page {
+      max-width: 1240px;
+
+      margin: 0 auto;
+
+      padding: 90px 30px 120px;
+    }
+
+
+    /* ========================================
+       HERO
+    ======================================== */
+
+    .hero-label {
+      margin-bottom: 14px;
+
+      font-size: 10px;
+      font-weight: 500;
+
+      letter-spacing: 0.32em;
+
+      color: #777777;
+    }
+
+    .hero-title {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(52px, 7vw, 96px);
+
+      font-weight: 400;
+
+      line-height: 0.95;
+
+      letter-spacing: -0.055em;
+
+      margin-bottom: 70px;
+    }
+
+
+    /* ========================================
+       INTRO
+    ======================================== */
+
+    .intro-grid {
+      display: grid;
+
+      grid-template-columns: 270px 1px 1fr;
+
+      gap: 60px;
+
+      align-items: start;
+    }
+
+    .intro-label {
+      padding-top: 6px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.3em;
+
+      color: #777777;
+    }
+
+    .intro-label span {
+      display: block;
+
+      margin-top: 9px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 20px;
+
+      letter-spacing: -0.03em;
+
+      color: #111111;
+    }
+
+    .intro-label::after {
+      content: "";
+
+      display: block;
+
+      width: 25px;
+      height: 1px;
+
+      margin-top: 27px;
+
+      background: #111111;
+    }
+
+    .intro-line {
+      width: 1px;
+      min-height: 580px;
+
+      background: #cccccc;
+    }
+
+    .intro-copy {
+      max-width: 760px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(16px, 1.4vw, 20px);
+
+      line-height: 2;
+
+      color: #333333;
+    }
+
+    .intro-copy p + p {
+      margin-top: 34px;
+    }
+
+    .intro-copy strong {
+      color: #111111;
+
+      font-weight: 500;
+    }
+
+
+    /* IMPORTANT POINT */
+
+    .policy {
+      margin: 42px 0;
+
+      padding: 34px 0;
+
+      border-top: 1px solid #999999;
+      border-bottom: 1px solid #999999;
+    }
+
+    .policy-title {
+      margin-bottom: 10px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(22px, 2vw, 29px);
+
+      line-height: 1.55;
+
+      color: #111111;
+    }
+
+    .policy-copy {
+      font-size: clamp(15px, 1.25vw, 18px);
+
+      color: #555555;
+    }
+
+
+    /* ========================================
+       EMAIL
+    ======================================== */
+
+    .email-area {
+      margin-top: 60px;
+
+      padding-top: 45px;
+
+      border-top: 1px solid #111111;
+    }
+
+    .email-label {
+      margin-bottom: 12px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.28em;
+
+      color: #777777;
+    }
+
+    .email-link {
+      display: inline-block;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(26px, 3.6vw, 48px);
+
+      line-height: 1.2;
+
+      letter-spacing: -0.04em;
+
+      border-bottom: 1px solid #111111;
+
+      transition: opacity 0.2s ease;
+    }
+
+    .email-link:hover {
+      opacity: 0.5;
+    }
+
+
+    /* ========================================
+       INQUIRY AREA
+    ======================================== */
+
+    .inquiry-section {
+      margin-top: 120px;
+
+      padding: 85px 7vw 95px;
+
+      background: #090909;
+      color: #ffffff;
+    }
+
+    .inquiry-inner {
+      max-width: 1050px;
+
+      margin: 0 auto;
+    }
+
+    .inquiry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      gap: 40px;
+
+      padding-bottom: 35px;
+
+      border-bottom: 1px solid #555555;
+    }
+
+    .inquiry-small {
+      margin-bottom: 10px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.3em;
+
+      color: #999999;
+    }
+
+    .inquiry-title {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(32px, 4vw, 55px);
+
+      font-weight: 400;
+
+      line-height: 1.25;
+
+      letter-spacing: -0.05em;
+    }
+
+    .inquiry-description {
+      max-width: 390px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
+      color: #bbbbbb;
+    }
+
+
+    /* ========================================
+       FORM PREVIEW
+    ======================================== */
+
+    .form-box {
+      margin-top: 45px;
+
+      padding: 5px 0;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+    }
+
+    .form-item {
+      padding: 26px 0;
+
+      border-bottom: 1px solid #353535;
+    }
+
+    .form-item:first-child {
+      border-top: 1px solid #353535;
+    }
+
+    .form-title {
+      margin-bottom: 8px;
+
+      font-size: 15px;
+
+      color: #ffffff;
+    }
+
+    .form-guide {
+      font-size: 13px;
+
+      line-height: 1.9;
+
+      color: #999999;
+    }
+
+    .form-option {
+      margin-top: 10px;
+
+      font-size: 12px;
+
+      line-height: 1.8;
+
+      color: #777777;
+    }
+
+
+    /* ========================================
+       BUTTONS
+    ======================================== */
+
+    .action-buttons {
+      margin-top: 50px;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 14px;
+    }
+
+    .action-button {
+      min-width: 190px;
+
+      height: 52px;
+
+      padding: 0 22px;
+
+      border: 1px solid #777777;
+
+      background: transparent;
+      color: #ffffff;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 10px;
+
+      letter-spacing: 0.2em;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .action-button:hover {
+      background: #ffffff;
+      color: #111111;
+
+      border-color: #ffffff;
+    }
+
+    .action-button.primary {
+      background: #ffffff;
+      color: #111111;
+
+      border-color: #ffffff;
+    }
+
+    .action-button.primary:hover {
+      background: transparent;
+      color: #ffffff;
+    }
+
+    .copy-message {
+      min-height: 24px;
+
+      margin-top: 18px;
+
+      font-size: 12px;
+
+      color: #bbbbbb;
+
+      opacity: 0;
+
+      transition: opacity 0.2s ease;
+    }
+
+    .copy-message.show {
+      opacity: 1;
+    }
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      max-width: 1320px;
+
+      margin: 0 auto;
+
+      border-top: 1px solid #777777;
+
+      padding: 28px 3vw 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.22em;
+    }
+
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media (max-width: 768px) {
+
+      header {
+        height: 78px;
+
+        padding: 0 20px;
+      }
+
+      .logo img {
+        width: 94px;
+        max-height: 56px;
+      }
+
+      nav {
+        gap: 15px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.17em;
+      }
+
+
+      .contact-page {
+        padding:
+          60px
+          25px
+          85px;
+      }
+
+      .hero-title {
+        font-size: 56px;
+
+        margin-bottom: 50px;
+      }
+
+      .intro-grid {
+        display: block;
+      }
+
+      .intro-label {
+        margin-bottom: 28px;
+      }
+
+      .intro-line {
+        width: 100%;
+        height: 1px;
+        min-height: 0;
+
+        margin-bottom: 38px;
+      }
+
+      .intro-copy {
+        font-size: 16px;
+
+        line-height: 1.95;
+      }
+
+      .policy {
+        margin: 35px 0;
+
+        padding: 28px 0;
+      }
+
+      .email-area {
+        margin-top: 50px;
+      }
+
+      .email-link {
+        font-size: 28px;
+
+        word-break: break-all;
+      }
+
+
+      /* INQUIRY */
+
+      .inquiry-section {
+        margin-top: 85px;
+
+        padding:
+          65px
+          25px
+          75px;
+      }
+
+      .inquiry-head {
+        display: block;
+      }
+
+      .inquiry-description {
+        margin-top: 25px;
+      }
+
+      .inquiry-title {
+        font-size: 38px;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+
+      .action-button {
+        width: 100%;
+      }
+
+
+      /* FOOTER */
+
+      footer {
+        margin: 0 25px;
+
+        padding-left: 0;
+        padding-right: 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+
+    }
+
+
+    /* ========================================
+       SMALL MOBILE
+    ======================================== */
+
+    @media (max-width: 430px) {
+
+      nav {
+        gap: 9px;
+
+        font-size: 7px;
+      }
+
+      .logo img {
+        width: 88px;
+      }
+
+      .hero-title {
+        font-size: 49px;
+      }
+
+      .email-link {
+        font-size: 24px;
+      }
+
+      .inquiry-title {
+        font-size: 33px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ========================================
+       HEADER
+  ========================================= -->
+
+  <header>
+
+    <a
+      class="logo"
+      href="index.html"
+      aria-label="STUDIO ROBOK 홈"
+    >
+      <img
+        src="studio-robok-logo.png"
+        alt="STUDIO ROBOK"
+      >
+    </a>
+
+
+    <nav>
+
+      <a href="games.html">
+        GAMES
+      </a>
+
+      <a href="about.html">
+        ABOUT
+      </a>
+
+      <a
+        class="active"
+        href="contact.html"
+      >
+        CONTACT
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- ========================================
+         INTRO
+    ========================================= -->
+
+    <section class="contact-page">
+
+
+      <div class="hero-label">
+        STUDIO ROBOK / CONTACT
+      </div>
+
+
+      <h1 class="hero-title">
+        CONTACT
+      </h1>
+
+
+
+      <div class="intro-grid">
+
+
+        <div class="intro-label">
+
+          MANUFACTURING
+
+          <span>
+            제조 안내
+          </span>
+
+        </div>
+
+
+        <div class="intro-line"></div>
+
+
+
+        <div class="intro-copy">
+
+
+          <p>
+            <strong>
+              스튜디오 로복은 머더미스터리 전문 제작사입니다.
+            </strong>
+          </p>
+
+
+          <p>
+            다른 보드게임은, 카드나 설명서로만 이뤄진
+            단순한 작품이 아니면 제작이 힘든 점
+            양해 부탁드리겠습니다.
+          </p>
+
+
+
+          <div class="policy">
+
+            <div class="policy-title">
+              MOQ 제한이 없습니다.
+            </div>
+
+            <div class="policy-copy">
+              스튜디오 로복은 MOQ(최소 주문 수량) 제한을 두지 않습니다.<br>
+              작가님들의 작품이 10개든, 100개든 멋진 형태로 세상에 나오길 바라기 때문에,
+              최소 주문 수량 제한을 없앴습니다.
+            </div>
+
+          </div>
+
+
+
+          <div class="policy">
+
+            <div class="policy-title">
+              1,000세트 이상의 대량 생산은 어렵습니다.
+            </div>
+
+            <div class="policy-copy">
+              스튜디오 로복은 소규모 제작사입니다.<br>
+              월 생산량이 제한되어 있어,
+              1,000세트 이상의 대량 주문은 받기 어려운 점
+              양해 부탁드리겠습니다.
+            </div>
+
+          </div>
+
+
+
+          <p>
+            제조 문의는 아래
+            <strong>‘제조 문의 양식’</strong>을 작성하신 뒤
+            메일 주시면 최대한 빠르게,
+            성심성의껏 답변드릴 수 있도록 노력하겠습니다.
+          </p>
+
+
+          <p>
+            브랜드 협업, 콘텐츠 및 기타 제안이 있으신 경우에도
+            아래 메일로 연락 주시길 바랍니다.
+          </p>
+
+
+
+          <div class="email-area">
+
+            <div class="email-label">
+              CONTACT E-MAIL
+            </div>
+
+            <a
+              class="email-link"
+              href="mailto:robok@studiorobok.com"
+            >
+              robok@studiorobok.com
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         INQUIRY FORM
+    ========================================= -->
+
+    <section class="inquiry-section">
+
+
+      <div class="inquiry-inner">
+
+
+        <div class="inquiry-head">
+
+
+          <div>
+
+            <div class="inquiry-small">
+              MANUFACTURING INQUIRY
+            </div>
+
+            <h2 class="inquiry-title">
+              제조 문의 양식
+            </h2>
+
+          </div>
+
+
+          <p class="inquiry-description">
+            아래 내용을 복사하여 메일에 작성해 주세요.
+            정확한 사양을 모르시는 경우 예상 수치나
+            ‘상담 필요’라고 작성해 주셔도 괜찮습니다.
+          </p>
+
+
+        </div>
+
+
+
+        <div class="form-box">
+
+
+          <div class="form-item">
+
+            <div class="form-title">
+              이름 :
+            </div>
+
+          </div>
+
+
+          <div class="form-item">
+
+            <div class="form-title">
+              연락처 :
+            </div>
+
+          </div>
+
+
+          <div class="form-item">
+
+            <div class="form-title">
+              이메일 :
+            </div>
+
+          </div>
+
+
+          <div class="form-item">
+
+            <div class="form-title">
+              작품명 :
+            </div>
+
+          </div>
+
+
+          <div class="form-item">
+
+            <div class="form-title">
+              구성품 :
+            </div>
+
+            <div class="form-guide">
+              예) 캐릭터 설정집 6권 / 가이드북 1권 /
+              각 책자의 페이지 수 / 단서카드 80장 /
+              특수 구성품 등
+            </div>
+
+            <div class="form-option">
+              정확히 모르실 경우 대략적인 수치나
+              예상 수치만 적어주셔도 됩니다.
+            </div>
+
+          </div>
+
+
+          <div class="form-item">
+
+            <div class="form-title">
+              희망 사양 :
+            </div>
+
+            <div class="form-guide">
+              예) 책자는 A4 사이즈, 128gsm 스노우지 /
+              카드는 58×88mm, 300gsm 아트지,
+              무광 코팅 등
+            </div>
+
+            <div class="form-option">
+              정확히 모르실 경우
+              ‘상담 필요’라고 적으셔도 됩니다.
+            </div>
+
+          </div>
+
+
+          <div class="form-item">
+
+            <div class="form-title">
+              패키지 박스 :
+            </div>
+
+            <div class="form-guide">
+              필요 / 불필요 / 상담 필요
+            </div>
+
+            <div class="form-option">
+              싸바리 박스 포함 구성 시
+              단가가 높아질 수 있습니다.
+            </div>
+
+          </div>
+
+
+          <div class="form-item">
+
+            <div class="form-title">
+              희망 제작 일정 :
+            </div>
+
+          </div>
+
+
+          <div class="form-item">
+
+            <div class="form-title">
+              기타 요청사항 :
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="action-buttons">
+
+
+          <button
+            class="action-button"
+            type="button"
+            id="copyFormButton"
+          >
+            COPY INQUIRY FORM
+          </button>
+
+
+          <a
+            class="action-button primary"
+            href="mailto:robok@studiorobok.com?subject=STUDIO%20ROBOK%20제조%20문의"
+          >
+            SEND E-MAIL
+          </a>
+
+
+        </div>
+
+
+        <div
+          class="copy-message"
+          id="copyMessage"
+        >
+          제조 문의 양식이 복사되었습니다.
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div>
+      STUDIO ROBOK
+    </div>
+
+    <div>
+      © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
+    </div>
+
+  </footer>
+
+
+
+  <!-- ========================================
+       COPY SCRIPT
+  ========================================= -->
+
+  <script>
+
+    const inquiryFormText =
+`제조 문의 양식
+
+이름 :
+
+연락처 :
+
+이메일 :
+
+작품명 :
+
+구성품 :
+예) 캐릭터 설정집 6권 / 가이드북 1권 / 각 책자의 페이지 수
+단서카드 80장 / 특수 구성품 등
+(정확히 모르실 경우 대략적인 수치나 예상 수치만 적어주셔도 됩니다.)
+
+희망 사양 :
+예) 책자는 A4 사이즈로, 용지는 128gsm 스노우지 /
+카드는 58x88mm, 용지는 300gsm 아트지, 무광 코팅 등
+(정확히 모르실 경우 '상담 필요'라 적으셔도 됩니다.)
+
+패키지 박스 :
+필요 / 불필요 / 상담 필요
+(싸바리 박스 포함 구성 시 단가가 높아질 수 있습니다.)
+
+희망 제작 일정 :
+
+기타 요청사항 :
+`;
+
+
+    const copyButton =
+      document.getElementById("copyFormButton");
+
+    const copyMessage =
+      document.getElementById("copyMessage");
+
+
+    copyButton.addEventListener(
+      "click",
+      async () => {
+
+        try {
+
+          await navigator.clipboard.writeText(
+            inquiryFormText
+          );
+
+          copyMessage.textContent =
+            "제조 문의 양식이 복사되었습니다.";
+
+          copyMessage.classList.add("show");
+
+
+          setTimeout(
+            () => {
+              copyMessage.classList.remove("show");
+            },
+            2500
+          );
+
+        }
+
+        catch (error) {
+
+          copyMessage.textContent =
+            "복사에 실패했습니다. 양식을 직접 선택해 복사해 주세요.";
+
+          copyMessage.classList.add("show");
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+</html>
