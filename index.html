@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>STUDIO ROBOK</title>
+  <meta
+    name="description"
+    content="당신의 이야기를 모두의 경험으로. STUDIO ROBOK 입니다."
+  >
 
   <style>
+
+    /* =========================
+       RESET
+    ========================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -20,6 +29,7 @@
     body {
       font-family:
         Pretendard,
+        "Noto Sans KR",
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -27,15 +37,24 @@
 
       background: #ffffff;
       color: #111111;
+
       line-height: 1.6;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
-    /* HEADER */
+    button {
+      font: inherit;
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       width: 100%;
@@ -45,45 +64,58 @@
       align-items: center;
       justify-content: space-between;
 
-      padding: 0 7vw;
+      padding: 0 6vw;
 
-      border-bottom: 1px solid #e8e8e8;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e5e5e5;
 
-      background: #ffffff;
+      position: relative;
+      z-index: 100;
     }
 
-    .logo img {
-      width: 150px;
+    .header-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo img {
       display: block;
+      width: 150px;
+      height: auto;
     }
 
     nav {
       display: flex;
-      gap: 42px;
+      align-items: center;
 
-      font-size: 13px;
+      gap: 44px;
+
+      font-size: 12px;
       font-weight: 500;
-      letter-spacing: 0.15em;
+
+      letter-spacing: 0.22em;
     }
 
     nav a {
       position: relative;
-      padding-bottom: 4px;
+
+      padding: 8px 0;
     }
 
     nav a::after {
       content: "";
+
       position: absolute;
 
       left: 0;
-      bottom: 0;
+      bottom: 2px;
 
       width: 0;
       height: 1px;
 
       background: #111111;
 
-      transition: width 0.25s;
+      transition: width 0.25s ease;
     }
 
     nav a:hover::after {
@@ -91,136 +123,318 @@
     }
 
 
-    /* HERO */
+
+    /* =========================
+       HERO / WORK SHOWCASE
+    ========================= */
 
     .hero {
       min-height: calc(100vh - 110px);
 
+      padding: 65px 4vw 90px;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+    }
 
+    .hero-intro {
       text-align: center;
 
-      padding: 80px 20px;
+      margin-bottom: 50px;
     }
 
-    .hero-logo {
-      width: min(420px, 70vw);
-
-      margin-bottom: 70px;
-    }
-
-    .hero h1 {
-      font-size: clamp(27px, 3vw, 48px);
-
-      font-weight: 500;
-      letter-spacing: -0.04em;
-
-      margin-bottom: 14px;
-    }
-
-    .hero h2 {
-      font-size: clamp(15px, 1.3vw, 19px);
+    .hero-intro h1 {
+      font-size: clamp(29px, 3vw, 48px);
 
       font-weight: 400;
 
-      letter-spacing: 0.22em;
+      letter-spacing: -0.045em;
 
-      margin-bottom: 60px;
+      line-height: 1.35;
+
+      margin-bottom: 10px;
     }
 
-    .hero-line {
-      width: 1px;
-      height: 60px;
-      background: #111111;
+    .hero-intro p {
+      font-size: clamp(12px, 1vw, 15px);
+
+      font-weight: 400;
+
+      letter-spacing: 0.28em;
     }
 
 
-    /* GENERAL SECTION */
 
-    section {
-      padding: 140px 8vw;
+    /* =========================
+       SLIDER
+    ========================= */
+
+    .showcase {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+
+      gap: 22px;
     }
 
-    .section-label {
-      font-size: 12px;
-      letter-spacing: 0.25em;
+    .slider-window {
+      width: 100%;
 
-      margin-bottom: 45px;
+      overflow: hidden;
     }
 
-    .section-title {
-      font-size: clamp(36px, 5vw, 76px);
+    .slider-track {
+      display: flex;
+
+      gap: 34px;
+
+      transition: transform 0.55s
+        cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+
+
+    /* =========================
+       WORK CARD
+    ========================= */
+
+    .work-card {
+      min-width: calc((100% - 68px) / 3);
+
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    /* PACKAGE IMAGE */
+
+    .work-image {
+      width: 100%;
+      height: clamp(330px, 37vw, 520px);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 22px 20px;
+
+      position: relative;
+    }
+
+    .work-image img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+    }
+
+    .work-card:hover .work-image img {
+      transform: translateY(-5px) scale(1.015);
+    }
+
+
+
+    /* WORK INFORMATION */
+
+    .work-info {
+      width: 100%;
+
+      border-top: 1px solid #1a1a1a;
+
+      padding-top: 18px;
+    }
+
+    .work-heading {
+      display: grid;
+
+      grid-template-columns: 54px 1fr;
+
+      align-items: start;
+
+      gap: 10px;
+
+      margin-bottom: 17px;
+    }
+
+    .work-number {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 19px;
+      font-weight: 400;
+
+      line-height: 1.4;
+    }
+
+    .work-title {
+      font-size: clamp(17px, 1.35vw, 22px);
 
       font-weight: 500;
 
-      letter-spacing: -0.04em;
+      letter-spacing: -0.045em;
 
-      line-height: 1.1;
+      line-height: 1.45;
+    }
 
-      margin-bottom: 60px;
+    .work-meta {
+      margin-left: 64px;
+
+      border-top: 1px solid #d2d2d2;
+      border-bottom: 1px solid #d2d2d2;
+
+      padding: 13px 0;
+    }
+
+    .meta-row {
+      display: grid;
+
+      grid-template-columns: 100px 1fr;
+
+      gap: 15px;
+
+      padding: 3px 0;
+
+      font-size: 12px;
+    }
+
+    .meta-label {
+      color: #777777;
+    }
+
+    .meta-value {
+      font-weight: 500;
     }
 
 
-    /* GAMES */
 
-    .games {
+    /* =========================
+       SLIDER BUTTONS
+    ========================= */
+
+    .slider-button {
+      flex: 0 0 48px;
+
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid #222222;
+      border-radius: 50%;
+
+      background: #ffffff;
+      color: #111111;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: 26px;
+      font-weight: 300;
+
+      line-height: 1;
+
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+    .slider-button:hover:not(:disabled) {
       background: #111111;
       color: #ffffff;
     }
 
-    .game-card {
-      border-top: 1px solid #555555;
-
-      padding: 55px 0;
-
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-
-      gap: 30px;
-
-      align-items: center;
+    .slider-button:disabled {
+      opacity: 0.2;
+      cursor: default;
     }
 
-    .game-number {
-      font-size: 12px;
-      letter-spacing: 0.2em;
 
-      color: #888888;
+
+    /* =========================
+       GAMES SECTION
+    ========================= */
+
+    .games {
+      background: #111111;
+      color: #ffffff;
+
+      padding: 130px 8vw;
     }
 
-    .game-name {
-      font-size: clamp(25px, 3vw, 46px);
+    .section-label {
+      font-size: 11px;
 
       font-weight: 500;
 
-      letter-spacing: -0.04em;
+      letter-spacing: 0.27em;
+
+      margin-bottom: 40px;
     }
 
-    .game-info {
-      font-size: 12px;
-      line-height: 2;
+    .section-title {
+      max-width: 900px;
 
-      letter-spacing: 0.08em;
+      font-size: clamp(38px, 5vw, 76px);
 
-      text-align: right;
+      font-weight: 400;
+
+      letter-spacing: -0.055em;
+
+      line-height: 1.15;
     }
 
 
-    /* ABOUT */
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      padding: 140px 8vw 160px;
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 2.2fr;
+
+      gap: 70px;
+    }
+
+    .about-title {
+      font-size: 11px;
+
+      font-weight: 500;
+
+      letter-spacing: 0.27em;
+    }
 
     .about-text {
-      max-width: 950px;
+      max-width: 900px;
 
-      font-size: clamp(24px, 3vw, 44px);
+      font-size: clamp(23px, 2.7vw, 42px);
 
       font-weight: 400;
 
       line-height: 1.55;
 
-      letter-spacing: -0.04em;
+      letter-spacing: -0.045em;
     }
 
     .about-text strong {
@@ -228,261 +442,982 @@
     }
 
 
-    /* CONTACT */
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
+      padding: 130px 8vw;
+
       border-top: 1px solid #dddddd;
     }
 
     .contact-grid {
       display: grid;
 
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2.2fr;
+
+      gap: 70px;
+    }
+
+    .contact-title {
+      font-size: 11px;
+
+      font-weight: 500;
+
+      letter-spacing: 0.27em;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
 
       gap: 50px;
     }
 
-    .contact-info {
-      font-size: 15px;
-      line-height: 2.1;
-    }
-
     .contact-email {
-      font-size: clamp(25px, 4vw, 55px);
+      width: fit-content;
 
-      font-weight: 500;
+      font-size: clamp(26px, 4vw, 58px);
 
-      letter-spacing: -0.04em;
+      font-weight: 400;
+
+      letter-spacing: -0.05em;
+
+      border-bottom: 1px solid #111111;
+
+      line-height: 1.2;
+
+      padding-bottom: 8px;
 
       word-break: break-all;
     }
 
+    .contact-email:hover {
+      opacity: 0.55;
+    }
 
-    /* FOOTER */
+    .contact-details {
+      font-size: 14px;
 
-    footer {
-      padding: 60px 8vw;
-
-      display: flex;
-      justify-content: space-between;
-
-      border-top: 1px solid #eeeeee;
-
-      font-size: 11px;
-      letter-spacing: 0.15em;
+      line-height: 2;
     }
 
 
-    /* MOBILE */
 
-    @media(max-width: 768px) {
+    /* =========================
+       FOOTER
+    ========================= */
 
-      header {
-        height: 90px;
-        padding: 0 25px;
+    footer {
+      padding: 55px 8vw;
+
+      border-top: 1px solid #eeeeee;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.17em;
+    }
+
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 1050px) {
+
+      .hero {
+        padding-left: 3vw;
+        padding-right: 3vw;
       }
 
-      .logo img {
-        width: 115px;
+      .showcase {
+        gap: 14px;
+      }
+
+      .slider-track {
+        gap: 22px;
+      }
+
+      .work-card {
+        min-width: calc((100% - 44px) / 3);
+      }
+
+      .work-heading {
+        grid-template-columns: 42px 1fr;
+      }
+
+      .work-meta {
+        margin-left: 52px;
+      }
+
+      .meta-row {
+        grid-template-columns: 80px 1fr;
+      }
+
+      .slider-button {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+
+        font-size: 22px;
+      }
+
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      header {
+        height: 86px;
+
+        padding: 0 22px;
+      }
+
+      .header-logo img {
+        width: 112px;
       }
 
       nav {
-        gap: 16px;
-        font-size: 10px;
+        gap: 15px;
+
+        font-size: 9px;
+
+        letter-spacing: 0.14em;
       }
 
-      section {
-        padding: 100px 25px;
-      }
+
+      /* HERO */
 
       .hero {
-        min-height: calc(100vh - 90px);
+        min-height: auto;
+
+        padding: 55px 15px 80px;
       }
 
-      .game-card {
+      .hero-intro {
+        margin-bottom: 38px;
+
+        padding: 0 15px;
+      }
+
+      .hero-intro h1 {
+        font-size: 26px;
+      }
+
+      .hero-intro p {
+        font-size: 10px;
+
+        letter-spacing: 0.2em;
+      }
+
+
+      /* SLIDER */
+
+      .showcase {
+        gap: 7px;
+      }
+
+      .slider-track {
+        gap: 20px;
+      }
+
+      .work-card {
+        min-width: 100%;
+      }
+
+      .work-image {
+        height: 420px;
+
+        padding: 5px 12px 18px;
+      }
+
+      .slider-button {
+        width: 32px;
+        height: 32px;
+
+        flex: 0 0 32px;
+
+        font-size: 19px;
+      }
+
+
+      /* WORK INFO */
+
+      .work-info {
+        max-width: 430px;
+
+        margin: 0 auto;
+      }
+
+      .work-heading {
+        grid-template-columns: 48px 1fr;
+      }
+
+      .work-number {
+        font-size: 17px;
+      }
+
+      .work-title {
+        font-size: 19px;
+      }
+
+      .work-meta {
+        margin-left: 58px;
+      }
+
+
+      /* OTHER SECTIONS */
+
+      .games {
+        padding: 95px 25px;
+      }
+
+      .about {
+        padding: 95px 25px 110px;
+      }
+
+      .about-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+
+        gap: 35px;
       }
 
-      .game-info {
-        text-align: left;
+      .contact {
+        padding: 95px 25px;
       }
 
       .contact-grid {
         grid-template-columns: 1fr;
+
+        gap: 35px;
       }
 
       footer {
         padding: 40px 25px;
 
         flex-direction: column;
+        align-items: flex-start;
+
         gap: 12px;
       }
+
+    }
+
+
+
+    /* =========================
+       SMALL MOBILE
+    ========================= */
+
+    @media (max-width: 430px) {
+
+      nav {
+        gap: 10px;
+
+        font-size: 8px;
+      }
+
+      .header-logo img {
+        width: 100px;
+      }
+
+      .work-image {
+        height: 350px;
+      }
+
+      .meta-row {
+        grid-template-columns: 90px 1fr;
+      }
+
     }
 
   </style>
 </head>
 
 
+
 <body>
 
 
-<header>
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-  <a class="logo" href="#">
-    <img src="studio-robok-logo.png" alt="STUDIO ROBOK">
-  </a>
+  <header>
 
-  <nav>
-    <a href="#games">GAMES</a>
-    <a href="#about">ABOUT</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
-
-</header>
-
-
-
-<main>
-
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <img
-      class="hero-logo"
-      src="studio-robok-logo.png"
-      alt="STUDIO ROBOK"
+    <a
+      href="#top"
+      class="header-logo"
+      aria-label="STUDIO ROBOK 홈"
     >
-
-    <h1>
-      당신의 이야기를 모두의 경험으로.
-    </h1>
-
-    <h2>
-      STUDIO ROBOK 입니다.
-    </h2>
-
-    <div class="hero-line"></div>
-
-  </section>
-
-
-
-  <!-- GAMES -->
-
-  <section class="games" id="games">
-
-    <div class="section-label">
-      OUR GAMES
-    </div>
-
-    <h2 class="section-title">
-      우리가 만든<br>
-      이야기들.
-    </h2>
-
-
-    <div class="game-card">
-
-      <div class="game-number">
-        001
-      </div>
-
-      <div class="game-name">
-        이세계 탐정<br>
-        : 팬미팅 살인사건
-      </div>
-
-      <div class="game-info">
-        MURDER MYSTERY<br>
-        8 PLAYERS
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="section-label">
-      ABOUT STUDIO ROBOK
-    </div>
-
-    <div class="about-text">
-
-      <strong>STUDIO ROBOK</strong>은
-      이야기를 만들고,
-      그 이야기를 사람들이 직접 경험할 수 있는
-      게임으로 만듭니다.
-
-      <br><br>
-
-      머더미스터리와 내러티브 게임을 중심으로
-      새로운 형태의 이야기를 연구합니다.
-
-    </div>
-
-  </section>
-
-
-
-  <!-- CONTACT -->
-
-  <section class="contact" id="contact">
-
-    <div class="section-label">
-      CONTACT
-    </div>
-
-
-    <div class="contact-grid">
-
-      <div class="contact-info">
-
-        STUDIO ROBOK<br>
-
-        대표 정지복<br><br>
-
-        경기도 평택시 포승읍<br>
-        포승산단로40번길 15-21<br>
-        평택오션센트럴비즈 A동 2442호
-
-      </div>
-
-
-      <a
-        class="contact-email"
-        href="mailto:robok@studiorobok.com"
+      <img
+        src="studio-robok-logo.png"
+        alt="STUDIO ROBOK"
       >
-        robok@studiorobok.com
+    </a>
+
+
+    <nav>
+
+      <a href="#games">
+        GAMES
       </a>
 
+      <a href="#about">
+        ABOUT
+      </a>
+
+      <a href="#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main id="top">
+
+
+    <!-- =========================
+         HERO / WORKS
+    ========================== -->
+
+    <section
+      class="hero"
+      aria-label="Studio Robok 작품"
+    >
+
+
+      <div class="hero-intro">
+
+        <h1>
+          당신의 이야기를 모두의 경험으로.
+        </h1>
+
+        <p>
+          STUDIO ROBOK 입니다.
+        </p>
+
+      </div>
+
+
+
+      <div class="showcase">
+
+
+        <!-- PREVIOUS -->
+
+        <button
+          class="slider-button prev"
+          type="button"
+          aria-label="이전 작품"
+        >
+          ‹
+        </button>
+
+
+
+        <!-- SLIDER WINDOW -->
+
+        <div class="slider-window">
+
+          <div class="slider-track">
+
+
+
+            <!-- =====================
+                 001
+                 이세계 탐정
+            ====================== -->
+
+            <article class="work-card">
+
+
+              <div class="work-image">
+
+                <img
+                  src="fanmeeting.png"
+                  alt="이세계 탐정 : 팬미팅 살인사건 패키지"
+                >
+
+              </div>
+
+
+              <div class="work-info">
+
+
+                <div class="work-heading">
+
+                  <div class="work-number">
+                    001
+                  </div>
+
+                  <h2 class="work-title">
+                    이세계 탐정 : 팬미팅 살인사건
+                  </h2>
+
+                </div>
+
+
+                <div class="work-meta">
+
+
+                  <div class="meta-row">
+
+                    <span class="meta-label">
+                      작가
+                    </span>
+
+                    <span class="meta-value">
+                      로복
+                    </span>
+
+                  </div>
+
+
+                  <div class="meta-row">
+
+                    <span class="meta-label">
+                      아트
+                    </span>
+
+                    <span class="meta-value">
+                      하다
+                    </span>
+
+                  </div>
+
+
+                  <div class="meta-row">
+
+                    <span class="meta-label">
+                      플레이 인원
+                    </span>
+
+                    <span class="meta-value">
+                      8인
+                    </span>
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+
+
+            <!-- =====================
+                 002
+                 영혼의 빛이 머무는 자리
+            ====================== -->
+
+            <article class="work-card">
+
+
+              <div class="work-image">
+
+                <img
+                  src="soul-light.png"
+                  alt="영혼의 빛이 머무는 자리 패키지"
+                >
+
+              </div>
+
+
+              <div class="work-info">
+
+
+                <div class="work-heading">
+
+                  <div class="work-number">
+                    002
+                  </div>
+
+                  <h2 class="work-title">
+                    영혼의 빛이 머무는 자리
+                  </h2>
+
+                </div>
+
+
+                <div class="work-meta">
+
+
+                  <div class="meta-row">
+
+                    <span class="meta-label">
+                      작가
+                    </span>
+
+                    <span class="meta-value">
+                      머룡, 로복
+                    </span>
+
+                  </div>
+
+
+                  <div class="meta-row">
+
+                    <span class="meta-label">
+                      플레이 인원
+                    </span>
+
+                    <span class="meta-value">
+                      7인
+                    </span>
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+
+
+            <!-- =====================
+                 003
+                 별이 내린 눈물
+            ====================== -->
+
+            <article class="work-card">
+
+
+              <div class="work-image">
+
+                <img
+                  src="star-tears.png"
+                  alt="별이 내린 눈물 패키지"
+                >
+
+              </div>
+
+
+              <div class="work-info">
+
+
+                <div class="work-heading">
+
+                  <div class="work-number">
+                    003
+                  </div>
+
+                  <h2 class="work-title">
+                    별이 내린 눈물
+                  </h2>
+
+                </div>
+
+
+                <div class="work-meta">
+
+
+                  <div class="meta-row">
+
+                    <span class="meta-label">
+                      작가
+                    </span>
+
+                    <span class="meta-value">
+                      4ON
+                    </span>
+
+                  </div>
+
+
+                  <div class="meta-row">
+
+                    <span class="meta-label">
+                      플레이 인원
+                    </span>
+
+                    <span class="meta-value">
+                      6인
+                    </span>
+
+                  </div>
+
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- NEXT -->
+
+        <button
+          class="slider-button next"
+          type="button"
+          aria-label="다음 작품"
+        >
+          ›
+        </button>
+
+
+      </div>
+
+    </section>
+
+
+
+
+    <!-- =========================
+         GAMES
+    ========================== -->
+
+    <section
+      class="games"
+      id="games"
+    >
+
+      <div class="section-label">
+        OUR GAMES
+      </div>
+
+      <h2 class="section-title">
+        우리가 만든<br>
+        이야기들.
+      </h2>
+
+    </section>
+
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section
+      class="about"
+      id="about"
+    >
+
+
+      <div class="about-grid">
+
+
+        <div class="about-title">
+          ABOUT STUDIO ROBOK
+        </div>
+
+
+        <div class="about-text">
+
+          <strong>STUDIO ROBOK</strong>은
+          이야기를 만들고,
+
+          <br>
+
+          그 이야기를 사람들이 직접 경험할 수 있는
+          게임으로 만듭니다.
+
+          <br><br>
+
+          머더미스터리와 내러티브 게임을 중심으로
+          새로운 형태의 이야기를 연구합니다.
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section
+      class="contact"
+      id="contact"
+    >
+
+
+      <div class="contact-grid">
+
+
+        <div class="contact-title">
+          CONTACT
+        </div>
+
+
+        <div class="contact-content">
+
+
+          <a
+            class="contact-email"
+            href="mailto:robok@studiorobok.com"
+          >
+            robok@studiorobok.com
+          </a>
+
+
+          <div class="contact-details">
+
+            STUDIO ROBOK
+
+            <br>
+
+            대표 정지복
+
+            <br><br>
+
+            경기도 평택시 포승읍
+            포승산단로40번길 15-21
+
+            <br>
+
+            평택오션센트럴비즈 A동 2442호
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div>
+      STUDIO ROBOK
     </div>
 
-  </section>
+    <div>
+      © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
+    </div>
+
+  </footer>
 
 
-</main>
+
+
+  <!-- =========================
+       SLIDER SCRIPT
+  ========================== -->
+
+  <script>
+
+    const track =
+      document.querySelector(".slider-track");
+
+    const cards =
+      document.querySelectorAll(".work-card");
+
+    const prevButton =
+      document.querySelector(".slider-button.prev");
+
+    const nextButton =
+      document.querySelector(".slider-button.next");
+
+
+    let currentIndex = 0;
 
 
 
-<footer>
+    function getVisibleCards() {
 
-  <div>
-    STUDIO ROBOK
-  </div>
+      if (window.innerWidth <= 768) {
+        return 1;
+      }
 
-  <div>
-    © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
-  </div>
+      return 3;
 
-</footer>
+    }
+
+
+
+    function getGap() {
+
+      if (window.innerWidth <= 768) {
+        return 20;
+      }
+
+      if (window.innerWidth <= 1050) {
+        return 22;
+      }
+
+      return 34;
+
+    }
+
+
+
+    function updateButtons() {
+
+      const visibleCards =
+        getVisibleCards();
+
+      const maxIndex =
+        Math.max(
+          0,
+          cards.length - visibleCards
+        );
+
+
+      prevButton.disabled =
+        currentIndex <= 0;
+
+      nextButton.disabled =
+        currentIndex >= maxIndex;
+
+    }
+
+
+
+    function updateSlider() {
+
+      if (!cards.length) {
+        return;
+      }
+
+
+      const visibleCards =
+        getVisibleCards();
+
+      const maxIndex =
+        Math.max(
+          0,
+          cards.length - visibleCards
+        );
+
+
+      if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
+      }
+
+
+      const cardWidth =
+        cards[0]
+          .getBoundingClientRect()
+          .width;
+
+
+      const gap =
+        getGap();
+
+
+      const distance =
+        currentIndex *
+        (cardWidth + gap);
+
+
+      track.style.transform =
+        `translateX(-${distance}px)`;
+
+
+      updateButtons();
+
+    }
+
+
+
+    nextButton.addEventListener(
+      "click",
+      () => {
+
+        const visibleCards =
+          getVisibleCards();
+
+        const maxIndex =
+          Math.max(
+            0,
+            cards.length - visibleCards
+          );
+
+
+        if (currentIndex < maxIndex) {
+
+          currentIndex++;
+
+          updateSlider();
+
+        }
+
+      }
+    );
+
+
+
+    prevButton.addEventListener(
+      "click",
+      () => {
+
+        if (currentIndex > 0) {
+
+          currentIndex--;
+
+          updateSlider();
+
+        }
+
+      }
+    );
+
+
+
+    window.addEventListener(
+      "resize",
+      updateSlider
+    );
+
+
+
+    window.addEventListener(
+      "load",
+      updateSlider
+    );
+
+
+  </script>
 
 
 </body>
