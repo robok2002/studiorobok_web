@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>STUDIO ROBOK</title>
+
   <meta
     name="description"
     content="당신의 이야기를 모두의 경험으로. STUDIO ROBOK 입니다."
@@ -12,9 +13,9 @@
 
   <style>
 
-    /* =========================
+    /* ==============================
        RESET
-    ========================= */
+    ============================== */
 
     * {
       margin: 0;
@@ -27,6 +28,9 @@
     }
 
     body {
+      background: #fff;
+      color: #111;
+
       font-family:
         Pretendard,
         "Noto Sans KR",
@@ -35,15 +39,14 @@
         "Segoe UI",
         sans-serif;
 
-      background: #ffffff;
-      color: #111111;
-
       line-height: 1.6;
+
+      overflow-x: hidden;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     button {
@@ -52,53 +55,41 @@
 
 
 
-    /* =========================
+    /* ==============================
        HEADER
-    ========================= */
+    ============================== */
 
     header {
-      width: 100%;
-      height: 110px;
+      height: 92px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      padding: 0 6vw;
+      padding: 0 5vw;
 
-      background: rgba(255,255,255,0.96);
-      border-bottom: 1px solid #e5e5e5;
+      border-bottom: 1px solid #222;
 
-      position: relative;
-      z-index: 100;
+      background: #fff;
     }
 
-    .header-logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .header-logo img {
+    .logo img {
+      width: 145px;
       display: block;
-      width: 150px;
-      height: auto;
     }
 
     nav {
       display: flex;
-      align-items: center;
+      gap: 46px;
 
-      gap: 44px;
-
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 500;
 
-      letter-spacing: 0.22em;
+      letter-spacing: 0.28em;
     }
 
     nav a {
       position: relative;
-
       padding: 8px 0;
     }
 
@@ -113,7 +104,7 @@
       width: 0;
       height: 1px;
 
-      background: #111111;
+      background: #111;
 
       transition: width 0.25s ease;
     }
@@ -124,59 +115,56 @@
 
 
 
-    /* =========================
-       HERO / WORK SHOWCASE
-    ========================= */
+    /* ==============================
+       HERO
+    ============================== */
 
     .hero {
-      min-height: calc(100vh - 110px);
-
-      padding: 65px 4vw 90px;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      padding: 55px 3vw 75px;
     }
 
     .hero-intro {
       text-align: center;
 
-      margin-bottom: 50px;
+      margin-bottom: 42px;
     }
 
     .hero-intro h1 {
-      font-size: clamp(29px, 3vw, 48px);
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(27px, 2.8vw, 44px);
 
       font-weight: 400;
 
       letter-spacing: -0.045em;
 
-      line-height: 1.35;
-
-      margin-bottom: 10px;
+      margin-bottom: 11px;
     }
 
     .hero-intro p {
-      font-size: clamp(12px, 1vw, 15px);
+      font-size: 12px;
 
-      font-weight: 400;
-
-      letter-spacing: 0.28em;
+      letter-spacing: 0.32em;
     }
 
 
 
-    /* =========================
-       SLIDER
-    ========================= */
+    /* ==============================
+       SHOWCASE
+    ============================== */
 
     .showcase {
-      width: 100%;
+      max-width: 1450px;
+
+      margin: 0 auto;
 
       display: flex;
       align-items: center;
 
-      gap: 22px;
+      gap: 20px;
     }
 
     .slider-window {
@@ -188,80 +176,76 @@
     .slider-track {
       display: flex;
 
-      gap: 34px;
+      gap: 26px;
 
-      transition: transform 0.55s
+      transition:
+        transform 0.5s
         cubic-bezier(0.22, 1, 0.36, 1);
     }
 
 
 
-    /* =========================
+    /* ==============================
        WORK CARD
-    ========================= */
+    ============================== */
 
     .work-card {
-      min-width: calc((100% - 68px) / 3);
+      min-width: calc((100% - 52px) / 3);
 
       display: flex;
       flex-direction: column;
     }
 
 
+
     /* PACKAGE IMAGE */
 
     .work-image {
       width: 100%;
-      height: clamp(330px, 37vw, 520px);
+      height: 430px;
 
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: flex-end;
 
-      padding: 12px 22px 20px;
-
-      position: relative;
+      padding: 0 15px 12px;
     }
 
     .work-image img {
-      display: block;
-
       width: 100%;
       height: 100%;
 
       object-fit: contain;
 
-      transition:
-        transform 0.45s ease,
-        filter 0.45s ease;
+      display: block;
+
+      transition: transform 0.4s ease;
     }
 
     .work-card:hover .work-image img {
-      transform: translateY(-5px) scale(1.015);
+      transform: translateY(-5px);
     }
 
 
 
-    /* WORK INFORMATION */
+    /* ==============================
+       WORK INFO
+    ============================== */
 
     .work-info {
       width: 100%;
-
-      border-top: 1px solid #1a1a1a;
-
-      padding-top: 18px;
     }
 
     .work-heading {
       display: grid;
 
-      grid-template-columns: 54px 1fr;
+      grid-template-columns: 55px 1fr;
 
       align-items: start;
 
-      gap: 10px;
+      padding-bottom: 11px;
 
-      margin-bottom: 17px;
+      border-bottom: 1px solid #999;
     }
 
     .work-number {
@@ -270,81 +254,85 @@
         "Times New Roman",
         serif;
 
-      font-size: 19px;
-      font-weight: 400;
+      font-size: 22px;
 
       line-height: 1.4;
     }
 
     .work-title {
-      font-size: clamp(17px, 1.35vw, 22px);
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
 
-      font-weight: 500;
+      font-size: 17px;
 
-      letter-spacing: -0.045em;
+      font-weight: 400;
 
-      line-height: 1.45;
+      letter-spacing: -0.03em;
+
+      line-height: 1.5;
+
+      padding-top: 2px;
     }
 
     .work-meta {
-      margin-left: 64px;
-
-      border-top: 1px solid #d2d2d2;
-      border-bottom: 1px solid #d2d2d2;
-
       padding: 13px 0;
+
+      margin-left: 55px;
+
+      border-bottom: 1px solid #999;
     }
 
     .meta-row {
       display: grid;
 
-      grid-template-columns: 100px 1fr;
+      grid-template-columns: 95px 1fr;
 
       gap: 15px;
 
       padding: 3px 0;
 
-      font-size: 12px;
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 13px;
     }
 
     .meta-label {
-      color: #777777;
+      color: #333;
     }
 
     .meta-value {
-      font-weight: 500;
+      color: #111;
     }
 
 
 
-    /* =========================
+    /* ==============================
        SLIDER BUTTONS
-    ========================= */
+    ============================== */
 
     .slider-button {
-      flex: 0 0 48px;
+      flex: 0 0 54px;
 
-      width: 48px;
-      height: 48px;
+      width: 54px;
+      height: 54px;
+
+      border: 1px solid #222;
+      border-radius: 50%;
+
+      background: #fff;
+      color: #111;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      border: 1px solid #222222;
-      border-radius: 50%;
-
-      background: #ffffff;
-      color: #111111;
-
-      font-family:
-        Arial,
-        sans-serif;
-
-      font-size: 26px;
+      font-size: 27px;
       font-weight: 300;
-
-      line-height: 1;
 
       cursor: pointer;
 
@@ -355,264 +343,281 @@
     }
 
     .slider-button:hover:not(:disabled) {
-      background: #111111;
-      color: #ffffff;
+      background: #111;
+      color: #fff;
     }
 
     .slider-button:disabled {
-      opacity: 0.2;
+      opacity: 0.28;
       cursor: default;
     }
 
 
 
-    /* =========================
-       GAMES SECTION
-    ========================= */
+    /* ==============================
+       ABOUT
+    ============================== */
 
-    .games {
-      background: #111111;
-      color: #ffffff;
+    .about {
+      background: #070707;
+      color: #fff;
 
-      padding: 130px 8vw;
+      padding: 72px 8vw 82px;
+    }
+
+    .about-inner {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: 280px 1px 1fr;
+
+      gap: 60px;
+
+      align-items: start;
     }
 
     .section-label {
       font-size: 11px;
 
-      font-weight: 500;
+      letter-spacing: 0.3em;
 
-      letter-spacing: 0.27em;
-
-      margin-bottom: 40px;
+      padding-top: 9px;
     }
 
-    .section-title {
-      max-width: 900px;
+    .section-label::after {
+      content: "";
 
-      font-size: clamp(38px, 5vw, 76px);
+      display: block;
 
-      font-weight: 400;
+      width: 22px;
+      height: 1px;
 
-      letter-spacing: -0.055em;
+      margin-top: 27px;
 
-      line-height: 1.15;
+      background: currentColor;
     }
 
+    .about-line {
+      width: 1px;
+      height: 180px;
 
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about {
-      padding: 140px 8vw 160px;
+      background: #777;
     }
 
-    .about-grid {
-      display: grid;
-
-      grid-template-columns: 1fr 2.2fr;
-
-      gap: 70px;
+    .about-content {
+      max-width: 690px;
     }
 
-    .about-title {
-      font-size: 11px;
+    .about-lead {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
 
-      font-weight: 500;
-
-      letter-spacing: 0.27em;
-    }
-
-    .about-text {
-      max-width: 900px;
-
-      font-size: clamp(23px, 2.7vw, 42px);
-
-      font-weight: 400;
+      font-size: clamp(22px, 2.15vw, 32px);
 
       line-height: 1.55;
 
-      letter-spacing: -0.045em;
+      letter-spacing: -0.035em;
+
+      margin-bottom: 25px;
     }
 
-    .about-text strong {
-      font-weight: 600;
+    .about-sub {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 16px;
+
+      line-height: 1.8;
+
+      color: #ddd;
     }
 
 
 
-    /* =========================
+    /* ==============================
        CONTACT
-    ========================= */
+    ============================== */
 
     .contact {
-      padding: 130px 8vw;
+      background: #fff;
 
-      border-top: 1px solid #dddddd;
+      padding: 72px 8vw 55px;
     }
 
-    .contact-grid {
+    .contact-inner {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
       display: grid;
 
-      grid-template-columns: 1fr 2.2fr;
+      grid-template-columns: 280px 1px 1fr;
 
-      gap: 70px;
+      gap: 60px;
     }
 
-    .contact-title {
-      font-size: 11px;
+    .contact-line {
+      width: 1px;
+      height: 165px;
 
-      font-weight: 500;
-
-      letter-spacing: 0.27em;
+      background: #999;
     }
 
     .contact-content {
-      display: flex;
-      flex-direction: column;
-
-      gap: 50px;
+      padding-top: 2px;
     }
 
     .contact-email {
-      width: fit-content;
+      display: inline-block;
 
-      font-size: clamp(26px, 4vw, 58px);
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-      font-weight: 400;
+      font-size: clamp(23px, 2.4vw, 34px);
 
-      letter-spacing: -0.05em;
+      border-bottom: 1px solid #111;
 
-      border-bottom: 1px solid #111111;
+      line-height: 1.15;
 
-      line-height: 1.2;
-
-      padding-bottom: 8px;
-
-      word-break: break-all;
+      margin-bottom: 20px;
     }
 
     .contact-email:hover {
       opacity: 0.55;
     }
 
-    .contact-details {
+    .contact-info {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
       font-size: 14px;
 
-      line-height: 2;
+      line-height: 1.85;
     }
 
 
 
-    /* =========================
+    /* ==============================
        FOOTER
-    ========================= */
+    ============================== */
 
     footer {
-      padding: 55px 8vw;
+      max-width: 1320px;
 
-      border-top: 1px solid #eeeeee;
+      margin: 0 auto;
+
+      border-top: 1px solid #777;
+
+      padding: 28px 3vw 34px;
 
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
 
-      gap: 30px;
+      gap: 25px;
 
       font-size: 10px;
 
-      letter-spacing: 0.17em;
+      letter-spacing: 0.22em;
     }
 
 
 
-    /* =========================
+    /* ==============================
        TABLET
-    ========================= */
+    ============================== */
 
-    @media (max-width: 1050px) {
-
-      .hero {
-        padding-left: 3vw;
-        padding-right: 3vw;
-      }
+    @media (max-width: 1100px) {
 
       .showcase {
-        gap: 14px;
+        max-width: 1000px;
       }
 
       .slider-track {
-        gap: 22px;
+        gap: 20px;
       }
 
       .work-card {
-        min-width: calc((100% - 44px) / 3);
+        min-width: calc((100% - 40px) / 3);
+      }
+
+      .work-image {
+        height: 370px;
       }
 
       .work-heading {
-        grid-template-columns: 42px 1fr;
+        grid-template-columns: 45px 1fr;
       }
 
       .work-meta {
-        margin-left: 52px;
+        margin-left: 45px;
       }
 
       .meta-row {
-        grid-template-columns: 80px 1fr;
+        grid-template-columns: 82px 1fr;
+
+        font-size: 12px;
       }
 
       .slider-button {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
 
-        flex-basis: 40px;
+        flex-basis: 44px;
 
-        font-size: 22px;
+        font-size: 23px;
       }
 
     }
 
 
 
-    /* =========================
+    /* ==============================
        MOBILE
-    ========================= */
+    ============================== */
 
     @media (max-width: 768px) {
 
       header {
-        height: 86px;
+        height: 82px;
 
-        padding: 0 22px;
+        padding: 0 20px;
       }
 
-      .header-logo img {
-        width: 112px;
+      .logo img {
+        width: 105px;
       }
 
       nav {
         gap: 15px;
 
-        font-size: 9px;
+        font-size: 8px;
 
-        letter-spacing: 0.14em;
+        letter-spacing: 0.17em;
       }
 
 
       /* HERO */
 
       .hero {
-        min-height: auto;
-
-        padding: 55px 15px 80px;
+        padding: 45px 10px 65px;
       }
 
       .hero-intro {
-        margin-bottom: 38px;
+        padding: 0 20px;
 
-        padding: 0 15px;
+        margin-bottom: 28px;
       }
 
       .hero-intro h1 {
@@ -620,16 +625,16 @@
       }
 
       .hero-intro p {
-        font-size: 10px;
+        font-size: 9px;
 
-        letter-spacing: 0.2em;
+        letter-spacing: 0.24em;
       }
 
 
       /* SLIDER */
 
       .showcase {
-        gap: 7px;
+        gap: 6px;
       }
 
       .slider-track {
@@ -643,7 +648,14 @@
       .work-image {
         height: 420px;
 
-        padding: 5px 12px 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .work-info {
+        max-width: 430px;
+
+        margin: 0 auto;
       }
 
       .slider-button {
@@ -656,92 +668,94 @@
       }
 
 
-      /* WORK INFO */
-
-      .work-info {
-        max-width: 430px;
-
-        margin: 0 auto;
-      }
-
-      .work-heading {
-        grid-template-columns: 48px 1fr;
-      }
-
-      .work-number {
-        font-size: 17px;
-      }
-
-      .work-title {
-        font-size: 19px;
-      }
-
-      .work-meta {
-        margin-left: 58px;
-      }
-
-
-      /* OTHER SECTIONS */
-
-      .games {
-        padding: 95px 25px;
-      }
+      /* ABOUT */
 
       .about {
-        padding: 95px 25px 110px;
+        padding: 65px 25px 75px;
       }
 
-      .about-grid {
+      .about-inner {
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 32px;
       }
+
+      .about-line {
+        width: 100%;
+        height: 1px;
+      }
+
+      .about-lead {
+        font-size: 25px;
+      }
+
+
+      /* CONTACT */
 
       .contact {
-        padding: 95px 25px;
+        padding: 65px 25px 50px;
       }
 
-      .contact-grid {
+      .contact-inner {
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 32px;
       }
 
+      .contact-line {
+        width: 100%;
+        height: 1px;
+      }
+
+
+      /* FOOTER */
+
       footer {
-        padding: 40px 25px;
+        margin: 0 25px;
+
+        padding-left: 0;
+        padding-right: 0;
 
         flex-direction: column;
         align-items: flex-start;
 
-        gap: 12px;
+        gap: 10px;
       }
 
     }
 
 
 
-    /* =========================
+    /* ==============================
        SMALL MOBILE
-    ========================= */
+    ============================== */
 
     @media (max-width: 430px) {
 
       nav {
-        gap: 10px;
+        gap: 9px;
 
-        font-size: 8px;
+        font-size: 7px;
       }
 
-      .header-logo img {
-        width: 100px;
+      .logo img {
+        width: 92px;
       }
 
       .work-image {
         height: 350px;
       }
 
+      .work-title {
+        font-size: 16px;
+      }
+
       .meta-row {
         grid-template-columns: 90px 1fr;
+      }
+
+      .contact-email {
+        font-size: 23px;
       }
 
     }
@@ -754,15 +768,15 @@
 <body>
 
 
-  <!-- =========================
+  <!-- ==============================
        HEADER
-  ========================== -->
+  ============================== -->
 
   <header>
 
     <a
+      class="logo"
       href="#top"
-      class="header-logo"
       aria-label="STUDIO ROBOK 홈"
     >
       <img
@@ -795,13 +809,13 @@
   <main id="top">
 
 
-    <!-- =========================
-         HERO / WORKS
-    ========================== -->
+    <!-- ==============================
+         HERO / GAMES
+    ============================== -->
 
     <section
       class="hero"
-      aria-label="Studio Robok 작품"
+      id="games"
     >
 
 
@@ -834,7 +848,7 @@
 
 
 
-        <!-- SLIDER WINDOW -->
+        <!-- SLIDER -->
 
         <div class="slider-window">
 
@@ -842,10 +856,9 @@
 
 
 
-            <!-- =====================
+            <!-- ==========================
                  001
-                 이세계 탐정
-            ====================== -->
+            ========================== -->
 
             <article class="work-card">
 
@@ -854,7 +867,7 @@
 
                 <img
                   src="fanmeeting.png"
-                  alt="이세계 탐정 : 팬미팅 살인사건 패키지"
+                  alt="이세계 탐정 : 팬미팅 살인사건"
                 >
 
               </div>
@@ -927,10 +940,9 @@
 
 
 
-            <!-- =====================
+            <!-- ==========================
                  002
-                 영혼의 빛이 머무는 자리
-            ====================== -->
+            ========================== -->
 
             <article class="work-card">
 
@@ -939,7 +951,7 @@
 
                 <img
                   src="soul-light.png"
-                  alt="영혼의 빛이 머무는 자리 패키지"
+                  alt="영혼의 빛이 머무는 자리"
                 >
 
               </div>
@@ -999,10 +1011,9 @@
 
 
 
-            <!-- =====================
+            <!-- ==========================
                  003
-                 별이 내린 눈물
-            ====================== -->
+            ========================== -->
 
             <article class="work-card">
 
@@ -1011,7 +1022,7 @@
 
                 <img
                   src="star-tears.png"
-                  alt="별이 내린 눈물 패키지"
+                  alt="별이 내린 눈물"
                 >
 
               </div>
@@ -1069,7 +1080,6 @@
             </article>
 
 
-
           </div>
 
         </div>
@@ -1094,61 +1104,54 @@
 
 
 
-    <!-- =========================
-         GAMES
-    ========================== -->
-
-    <section
-      class="games"
-      id="games"
-    >
-
-      <div class="section-label">
-        OUR GAMES
-      </div>
-
-      <h2 class="section-title">
-        우리가 만든<br>
-        이야기들.
-      </h2>
-
-    </section>
-
-
-
-
-    <!-- =========================
+    <!-- ==============================
          ABOUT
-    ========================== -->
+    ============================== -->
 
     <section
       class="about"
       id="about"
     >
 
+      <div class="about-inner">
 
-      <div class="about-grid">
 
-
-        <div class="about-title">
+        <div class="section-label">
           ABOUT STUDIO ROBOK
         </div>
 
 
-        <div class="about-text">
+        <div class="about-line"></div>
 
-          <strong>STUDIO ROBOK</strong>은
-          이야기를 만들고,
 
-          <br>
+        <div class="about-content">
 
-          그 이야기를 사람들이 직접 경험할 수 있는
-          게임으로 만듭니다.
 
-          <br><br>
+          <div class="about-lead">
 
-          머더미스터리와 내러티브 게임을 중심으로
-          새로운 형태의 이야기를 연구합니다.
+            STUDIO ROBOK은 이야기를 만들고,
+
+            <br>
+
+            그 이야기를 사람들이 직접 경험할 수 있는
+
+            <br>
+
+            게임으로 만듭니다.
+
+          </div>
+
+
+          <div class="about-sub">
+
+            머더미스터리와 내러티브 게임을 중심으로
+
+            <br>
+
+            새로운 형태의 이야기를 연구합니다.
+
+          </div>
+
 
         </div>
 
@@ -1160,9 +1163,9 @@
 
 
 
-    <!-- =========================
+    <!-- ==============================
          CONTACT
-    ========================== -->
+    ============================== -->
 
     <section
       class="contact"
@@ -1170,12 +1173,15 @@
     >
 
 
-      <div class="contact-grid">
+      <div class="contact-inner">
 
 
-        <div class="contact-title">
+        <div class="section-label">
           CONTACT
         </div>
+
+
+        <div class="contact-line"></div>
 
 
         <div class="contact-content">
@@ -1189,7 +1195,7 @@
           </a>
 
 
-          <div class="contact-details">
+          <div class="contact-info">
 
             STUDIO ROBOK
 
@@ -1197,7 +1203,7 @@
 
             대표 정지복
 
-            <br><br>
+            <br>
 
             경기도 평택시 포승읍
             포승산단로40번길 15-21
@@ -1211,6 +1217,7 @@
 
         </div>
 
+
       </div>
 
     </section>
@@ -1221,9 +1228,9 @@
 
 
 
-  <!-- =========================
+  <!-- ==============================
        FOOTER
-  ========================== -->
+  ============================== -->
 
   <footer>
 
@@ -1240,9 +1247,9 @@
 
 
 
-  <!-- =========================
+  <!-- ==============================
        SLIDER SCRIPT
-  ========================== -->
+  ============================== -->
 
   <script>
 
@@ -1266,7 +1273,9 @@
     function getVisibleCards() {
 
       if (window.innerWidth <= 768) {
+
         return 1;
+
       }
 
       return 3;
@@ -1278,14 +1287,18 @@
     function getGap() {
 
       if (window.innerWidth <= 768) {
+
         return 20;
+
       }
 
-      if (window.innerWidth <= 1050) {
-        return 22;
+      if (window.innerWidth <= 1100) {
+
+        return 20;
+
       }
 
-      return 34;
+      return 26;
 
     }
 
@@ -1295,6 +1308,7 @@
 
       const visibleCards =
         getVisibleCards();
+
 
       const maxIndex =
         Math.max(
@@ -1306,6 +1320,7 @@
       prevButton.disabled =
         currentIndex <= 0;
 
+
       nextButton.disabled =
         currentIndex >= maxIndex;
 
@@ -1316,12 +1331,15 @@
     function updateSlider() {
 
       if (!cards.length) {
+
         return;
+
       }
 
 
       const visibleCards =
         getVisibleCards();
+
 
       const maxIndex =
         Math.max(
@@ -1330,9 +1348,11 @@
         );
 
 
-      if (currentIndex > maxIndex) {
-        currentIndex = maxIndex;
-      }
+      currentIndex =
+        Math.min(
+          currentIndex,
+          maxIndex
+        );
 
 
       const cardWidth =
@@ -1345,13 +1365,13 @@
         getGap();
 
 
-      const distance =
+      const offset =
         currentIndex *
         (cardWidth + gap);
 
 
       track.style.transform =
-        `translateX(-${distance}px)`;
+        `translateX(-${offset}px)`;
 
 
       updateButtons();
@@ -1366,6 +1386,7 @@
 
         const visibleCards =
           getVisibleCards();
+
 
         const maxIndex =
           Math.max(
@@ -1408,7 +1429,6 @@
       "resize",
       updateSlider
     );
-
 
 
     window.addEventListener(
