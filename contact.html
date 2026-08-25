@@ -262,13 +262,16 @@
     /* IMPORTANT POINT */
 
     .policy {
-      margin: 42px 0;
+  margin: 42px 0;
 
-      padding: 34px 0;
+  padding: 34px 0;
 
-      border-top: 1px solid #999999;
-      border-bottom: 1px solid #999999;
-    }
+  border-bottom: 1px solid #999999;
+}
+
+.policy:first-of-type {
+  border-top: 1px solid #999999;
+}
 
     .policy-title {
       margin-bottom: 10px;
@@ -1064,20 +1067,15 @@
 
 
           <button
-            class="action-button"
-            type="button"
-            id="copyFormButton"
-          >
-            COPY INQUIRY FORM
-          </button>
+  class="action-button primary"
+  type="button"
+  id="copyFormButton"
+>
+  제조 문의 양식 복사하기
+</button>
 
 
-          <a
-            class="action-button primary"
-            href="mailto:robok@studiorobok.com?subject=STUDIO%20ROBOK%20제조%20문의"
-          >
-            SEND E-MAIL
-          </a>
+         
 
 
         </div>
