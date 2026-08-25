@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>영혼의 빛이 머무는 자리 | STUDIO ROBOK</title>
+
+  <meta
+    name="description"
+    content="피해자의 영혼과 현장에 있던 6명의 용의자. 영혼의 빛이 머무는 자리."
+  >
+
+  <style>
+
+    /* ========================================
+       RESET
+    ======================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+
+      font-family:
+        Pretendard,
+        "Noto Sans KR",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
+    header {
+      height: 92px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 5vw;
+
+      background: #ffffff;
+
+      border-bottom: 1px solid #222222;
+
+      position: relative;
+      z-index: 100;
+    }
+
+    .logo {
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      display: block;
+
+      width: 118px;
+      max-height: 68px;
+
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      gap: 46px;
+
+      font-size: 11px;
+      font-weight: 500;
+
+      letter-spacing: 0.28em;
+    }
+
+    nav a {
+      position: relative;
+      padding: 8px 0;
+    }
+
+    nav a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 2px;
+
+      width: 0;
+      height: 1px;
+
+      background: #6f42a5;
+
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+
+
+    /* ========================================
+       GAME HERO
+    ======================================== */
+
+    .game-hero {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      padding: 72px 30px 95px;
+    }
+
+
+
+    /* CATEGORY */
+
+    .game-category {
+      display: flex;
+      align-items: center;
+
+      gap: 15px;
+
+      margin-bottom: 20px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 11px;
+
+      letter-spacing: 0.22em;
+
+      color: #176b67;
+    }
+
+    .game-category::after {
+      content: "";
+
+      display: block;
+
+      width: 45px;
+      height: 1px;
+
+      background: #176b67;
+    }
+
+
+
+    /* TITLE */
+
+    .game-title {
+      max-width: 900px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(38px, 5vw, 72px);
+
+      font-weight: 400;
+
+      line-height: 1.18;
+
+      letter-spacing: -0.055em;
+
+      margin-bottom: 58px;
+    }
+
+
+
+    /* ========================================
+       PACKAGE + INFO
+    ======================================== */
+
+    .game-main {
+      display: grid;
+
+      grid-template-columns: 1.35fr 0.65fr;
+
+      gap: 85px;
+
+      align-items: center;
+    }
+
+
+
+    /* PACKAGE */
+
+    .package-area {
+      min-height: 560px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .package-area::before {
+      content: "";
+
+      position: absolute;
+
+      width: 440px;
+      height: 440px;
+
+      border: 1px solid #eee9f3;
+      border-radius: 50%;
+
+      z-index: -1;
+    }
+
+    .package-area img {
+      display: block;
+
+      width: 100%;
+      height: 500px;
+
+      object-fit: contain;
+
+      transform: scale(0.90);
+
+      transition:
+        transform 0.5s
+        cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .package-area:hover img {
+      transform: translateY(-7px) scale(0.93);
+    }
+
+
+
+    /* GAME INFO */
+
+    .game-info {
+      border-top: 1px solid #111111;
+    }
+
+    .info-row {
+      display: grid;
+
+      grid-template-columns: 125px 1fr;
+
+      gap: 20px;
+
+      padding: 18px 0;
+
+      border-bottom: 1px solid #d5d5d5;
+    }
+
+    .info-label {
+      font-size: 12px;
+
+      color: #777777;
+    }
+
+    .info-value {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 15px;
+
+      line-height: 1.5;
+    }
+
+    .difficulty {
+      color: #176b67;
+
+      letter-spacing: 0.12em;
+
+      white-space: nowrap;
+    }
+
+
+
+    /* ========================================
+       ABOUT GAME
+    ======================================== */
+
+    .game-about {
+      background: #100d16;
+      color: #ffffff;
+
+      padding: 120px 8vw 135px;
+    }
+
+    .about-inner {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: 280px 1px 1fr;
+
+      gap: 60px;
+
+      align-items: start;
+    }
+
+
+
+    /* LABEL */
+
+    .section-label {
+      padding-top: 7px;
+
+      font-size: 11px;
+
+      letter-spacing: 0.3em;
+
+      color: #d7d0df;
+    }
+
+    .section-label span {
+      display: block;
+
+      margin-top: 8px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 20px;
+
+      letter-spacing: -0.03em;
+
+      color: #ffffff;
+    }
+
+    .section-label::after {
+      content: "";
+
+      display: block;
+
+      width: 24px;
+      height: 2px;
+
+      margin-top: 28px;
+
+      background: #9467c6;
+    }
+
+
+
+    /* VERTICAL LINE */
+
+    .about-line {
+      width: 1px;
+      min-height: 620px;
+
+      background: #50475b;
+    }
+
+
+
+    /* COPY */
+
+    .about-copy {
+      max-width: 720px;
+    }
+
+    .about-opening {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(26px, 3vw, 43px);
+
+      font-weight: 400;
+
+      line-height: 1.55;
+
+      letter-spacing: -0.045em;
+
+      margin-bottom: 48px;
+    }
+
+    .accent-line {
+      display: block;
+
+      width: 55px;
+      height: 2px;
+
+      margin-bottom: 45px;
+
+      background: #2d918b;
+    }
+
+    .about-body {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(16px, 1.35vw, 19px);
+
+      line-height: 2;
+
+      color: #d8dddd;
+    }
+
+    .about-body p + p {
+      margin-top: 25px;
+    }
+
+
+
+    /* SOUL QUOTE */
+
+    .soul-quote {
+      margin: 60px 0;
+
+      padding: 35px 0;
+
+      border-top: 1px solid #2d918b;
+      border-bottom: 1px solid #2d918b;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(25px, 3vw, 39px);
+
+      font-weight: 400;
+
+      letter-spacing: -0.035em;
+
+      text-align: center;
+
+      color: #ffffff;
+    }
+
+
+
+    /* QUESTIONS */
+
+    .questions {
+      margin-top: 45px;
+    }
+
+    .questions p {
+      color: #ffffff;
+    }
+
+
+
+    /* FINAL COPY */
+
+    .final-copy {
+      margin-top: 55px !important;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(20px, 2vw, 27px);
+
+      line-height: 1.8;
+
+      color: #ffffff !important;
+    }
+
+    .game-name {
+      position: relative;
+
+      display: inline-block;
+
+      color: #ffffff;
+    }
+
+    .game-name::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: -5px;
+
+      width: 100%;
+      height: 1px;
+
+      background: #2d918b;
+    }
+
+
+
+    /* ========================================
+       BOTTOM NAVIGATION
+    ======================================== */
+
+    .bottom-nav {
+      max-width: 1180px;
+
+      margin: 0 auto;
+
+      padding: 70px 30px 85px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 15px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 12px;
+
+      letter-spacing: 0.18em;
+    }
+
+    .back-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 40px;
+      height: 40px;
+
+      border: 1px solid #111111;
+      border-radius: 50%;
+
+      font-size: 18px;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .back-link:hover .back-arrow {
+      background: #176b67;
+      border-color: #176b67;
+
+      color: #ffffff;
+    }
+
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      max-width: 1320px;
+
+      margin: 0 auto;
+
+      border-top: 1px solid #777777;
+
+      padding: 28px 3vw 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      font-size: 10px;
+
+      letter-spacing: 0.22em;
+    }
+
+
+
+    /* ========================================
+       TABLET
+    ======================================== */
+
+    @media (max-width: 1000px) {
+
+      .game-main {
+        gap: 45px;
+
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+
+      .package-area {
+        min-height: 480px;
+      }
+
+      .package-area img {
+        height: 440px;
+      }
+
+      .package-area::before {
+        width: 370px;
+        height: 370px;
+      }
+
+      .about-inner {
+        grid-template-columns: 210px 1px 1fr;
+
+        gap: 40px;
+      }
+
+    }
+
+
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media (max-width: 768px) {
+
+      header {
+        height: 78px;
+
+        padding: 0 20px;
+      }
+
+      .logo img {
+        width: 94px;
+        max-height: 56px;
+      }
+
+      nav {
+        gap: 15px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.17em;
+      }
+
+
+
+      .game-hero {
+        padding:
+          52px
+          25px
+          70px;
+      }
+
+      .game-category {
+        font-size: 9px;
+
+        margin-bottom: 16px;
+      }
+
+      .game-title {
+        font-size: 38px;
+
+        margin-bottom: 35px;
+      }
+
+
+
+      .game-main {
+        display: flex;
+        flex-direction: column;
+
+        gap: 35px;
+      }
+
+      .package-area {
+        width: 100%;
+
+        min-height: 390px;
+      }
+
+      .package-area img {
+        height: 370px;
+
+        transform: scale(0.90);
+      }
+
+      .package-area:hover img {
+        transform: translateY(-5px) scale(0.93);
+      }
+
+      .package-area::before {
+        width: 310px;
+        height: 310px;
+      }
+
+      .game-info {
+        width: 100%;
+      }
+
+      .info-row {
+        grid-template-columns: 110px 1fr;
+
+        padding: 16px 0;
+      }
+
+
+
+      .game-about {
+        padding:
+          80px
+          25px
+          90px;
+      }
+
+      .about-inner {
+        display: block;
+      }
+
+      .section-label {
+        margin-bottom: 28px;
+      }
+
+      .section-label::after {
+        margin-top: 20px;
+      }
+
+      .about-line {
+        width: 100%;
+        min-height: 0;
+        height: 1px;
+
+        margin-bottom: 40px;
+      }
+
+      .about-opening {
+        font-size: 29px;
+
+        margin-bottom: 35px;
+      }
+
+      .accent-line {
+        margin-bottom: 35px;
+      }
+
+      .about-body {
+        font-size: 16px;
+
+        line-height: 1.9;
+      }
+
+      .soul-quote {
+        margin: 45px 0;
+
+        padding: 28px 0;
+
+        font-size: 27px;
+      }
+
+      .final-copy {
+        font-size: 21px;
+      }
+
+
+
+      .bottom-nav {
+        padding:
+          55px
+          25px
+          65px;
+      }
+
+
+
+      footer {
+        margin: 0 25px;
+
+        padding-left: 0;
+        padding-right: 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+
+    }
+
+
+
+    /* ========================================
+       SMALL MOBILE
+    ======================================== */
+
+    @media (max-width: 430px) {
+
+      nav {
+        gap: 9px;
+
+        font-size: 7px;
+      }
+
+      .logo img {
+        width: 88px;
+      }
+
+      .game-title {
+        font-size: 33px;
+      }
+
+      .package-area {
+        min-height: 330px;
+      }
+
+      .package-area img {
+        height: 315px;
+      }
+
+      .package-area::before {
+        width: 265px;
+        height: 265px;
+      }
+
+      .info-row {
+        grid-template-columns: 100px 1fr;
+
+        gap: 10px;
+      }
+
+      .about-opening {
+        font-size: 25px;
+      }
+
+      .soul-quote {
+        font-size: 24px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ========================================
+       HEADER
+  ========================================= -->
+
+  <header>
+
+    <a
+      class="logo"
+      href="../index.html"
+      aria-label="STUDIO ROBOK 홈"
+    >
+      <img
+        src="../studio-robok-logo.png"
+        alt="STUDIO ROBOK"
+      >
+    </a>
+
+
+    <nav>
+
+      <a href="../index.html#games">
+        GAMES
+      </a>
+
+      <a href="../index.html#about">
+        ABOUT
+      </a>
+
+      <a href="../index.html#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- ========================================
+         GAME HERO
+    ========================================= -->
+
+    <section class="game-hero">
+
+
+      <div class="game-category">
+        002 / MURDER MYSTERY
+      </div>
+
+
+      <h1 class="game-title">
+        영혼의 빛이 머무는 자리
+      </h1>
+
+
+
+      <div class="game-main">
+
+
+        <!-- PACKAGE -->
+
+        <div class="package-area">
+
+          <img
+            src="../soul-light.png"
+            alt="영혼의 빛이 머무는 자리 패키지"
+          >
+
+        </div>
+
+
+
+        <!-- INFORMATION -->
+
+        <div class="game-info">
+
+
+          <div class="info-row">
+
+            <div class="info-label">
+              제작
+            </div>
+
+            <div class="info-value">
+              머룡, 로복
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-label">
+              플레이 인원
+            </div>
+
+            <div class="info-value">
+              7인
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-label">
+              플레이 타임
+            </div>
+
+            <div class="info-value">
+              120분
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-label">
+              난이도
+            </div>
+
+            <div class="info-value difficulty">
+              ★★★☆☆
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         ABOUT THE GAME
+    ========================================= -->
+
+    <section class="game-about">
+
+
+      <div class="about-inner">
+
+
+        <div class="section-label">
+
+          ABOUT THE GAME
+
+          <span>
+            작품 소개
+          </span>
+
+        </div>
+
+
+        <div class="about-line"></div>
+
+
+        <div class="about-copy">
+
+
+          <div class="about-opening">
+
+            대한민국 용진시.<br>
+            한때 대한민국 제2의 수도라 불렸지만,<br>
+            지금은 죽어가는 상권이 늘어가는 도시.
+
+          </div>
+
+
+          <span class="accent-line"></span>
+
+
+          <div class="about-body">
+
+
+            <p>
+              하지만 비례대표로 선출된 젊은 국회의원
+              <strong>최철진</strong> 덕분에
+              용진시는 점점 발전했고,
+              다시 호황기를 맞이하게 됐다.
+            </p>
+
+
+            <p>
+              그러던 어느 날,
+              낙후지역에 있는 <strong>‘용진빌라’</strong>에서
+              의문의 살인사건이 발생한다.
+            </p>
+
+
+            <p>
+              놀랍게도 그곳에 국회의원 최철진이
+              헐레벌떡 찾아온다.
+            </p>
+
+
+            <p>
+              그리고 더 놀라운 일이 벌어진다.
+            </p>
+
+
+            <div class="soul-quote">
+              “제가 보이시나요...?”
+            </div>
+
+
+            <p>
+              죽은 <strong>‘김도욱’의 영혼</strong>이
+              보이기 시작한 것이다.
+            </p>
+
+
+            <div class="questions">
+
+              <p>
+                김도욱은 왜 죽었을까?<br>
+                최철진은 왜 이곳에 왔을까?<br>
+                게다가, 죽은 김도욱의 영혼은 왜 보이는 것일까?
+              </p>
+
+            </div>
+
+
+            <p class="final-copy">
+
+              피해자의 영혼,<br>
+              그리고 현장에 있던 6명의 용의자...
+
+              <br><br>
+
+              당신들은,
+              이 <span class="game-name">《영혼의 빛이 머무는 자리》</span>에서
+              사건의 진상을 밝혀낼 수 있을까?
+
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         BACK
+    ========================================= -->
+
+    <section class="bottom-nav">
+
+      <a
+        class="back-link"
+        href="../index.html#games"
+      >
+
+        <span class="back-arrow">
+          ←
+        </span>
+
+        <span>
+          ALL GAMES
+        </span>
+
+      </a>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div>
+      STUDIO ROBOK
+    </div>
+
+    <div>
+      © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
