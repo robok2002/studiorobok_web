@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="당신의 이야기를 모두의 경험으로. STUDIO ROBOK 입니다."
+    content="당신의 이야기를 모두의 경험으로. STUDIO ROBOK"
   >
 
   <style>
@@ -71,10 +71,24 @@
       border-bottom: 1px solid #222222;
 
       background: #ffffff;
+
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      height: 100%;
     }
 
     .logo img {
-      width: 145px;
+      width: 118px;
+      max-height: 68px;
+
+      object-fit: contain;
+
       display: block;
     }
 
@@ -120,12 +134,13 @@
     ============================== */
 
     .hero {
-      padding: 55px 3vw 75px;
+      padding: 50px 3vw 75px;
     }
 
     .hero-intro {
       text-align: center;
-      margin-bottom: 42px;
+
+      margin-bottom: 38px;
     }
 
     .hero-intro h1 {
@@ -140,12 +155,24 @@
 
       letter-spacing: -0.045em;
 
-      margin-bottom: 11px;
+      line-height: 1.2;
+
+      margin-bottom: 2px;
     }
 
     .hero-intro p {
-      font-size: 12px;
-      letter-spacing: 0.32em;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(15px, 1.25vw, 20px);
+
+      font-weight: 400;
+
+      letter-spacing: 0.14em;
+
+      line-height: 1.25;
     }
 
 
@@ -224,14 +251,14 @@
     }
 
 
-    /* 이미지별 실제 투명 여백 차이 보정 */
+    /* 작품별 시각적 크기 보정 */
 
     .work-card:nth-child(1) .work-image img {
       transform: scale(1.03);
     }
 
     .work-card:nth-child(2) .work-image img {
-      transform: scale(0.94);
+      transform: scale(0.86);
     }
 
     .work-card:nth-child(3) .work-image img {
@@ -239,14 +266,14 @@
     }
 
 
-    /* hover 시 scale 유지 */
+    /* Hover */
 
     .work-card:nth-child(1):hover .work-image img {
       transform: translateY(-5px) scale(1.03);
     }
 
     .work-card:nth-child(2):hover .work-image img {
-      transform: translateY(-5px) scale(0.94);
+      transform: translateY(-5px) scale(0.86);
     }
 
     .work-card:nth-child(3):hover .work-image img {
@@ -633,13 +660,14 @@
     @media (max-width: 768px) {
 
       header {
-        height: 82px;
+        height: 78px;
 
         padding: 0 20px;
       }
 
       .logo img {
-        width: 105px;
+        width: 94px;
+        max-height: 56px;
       }
 
       nav {
@@ -652,23 +680,25 @@
 
 
       .hero {
-        padding: 45px 48px 65px;
+        padding: 42px 48px 65px;
       }
 
       .hero-intro {
         padding: 0 10px;
 
-        margin-bottom: 28px;
+        margin-bottom: 26px;
       }
 
       .hero-intro h1 {
-        font-size: 26px;
+        font-size: 25px;
+
+        margin-bottom: 1px;
       }
 
       .hero-intro p {
-        font-size: 9px;
+        font-size: 14px;
 
-        letter-spacing: 0.24em;
+        letter-spacing: 0.11em;
       }
 
 
@@ -775,7 +805,7 @@
       }
 
       .logo img {
-        width: 92px;
+        width: 88px;
       }
 
       .hero {
@@ -867,7 +897,7 @@
         </h1>
 
         <p>
-          STUDIO ROBOK 입니다.
+          -STUDIO ROBOK-
         </p>
 
       </div>
@@ -930,24 +960,11 @@
                   <div class="meta-row">
 
                     <span class="meta-label">
-                      작가
+                      제작
                     </span>
 
                     <span class="meta-value">
-                      로복
-                    </span>
-
-                  </div>
-
-
-                  <div class="meta-row">
-
-                    <span class="meta-label">
-                      아트
-                    </span>
-
-                    <span class="meta-value">
-                      하다
+                      로복, 하다
                     </span>
 
                   </div>
@@ -1012,7 +1029,7 @@
                   <div class="meta-row">
 
                     <span class="meta-label">
-                      작가
+                      제작
                     </span>
 
                     <span class="meta-value">
@@ -1081,7 +1098,7 @@
                   <div class="meta-row">
 
                     <span class="meta-label">
-                      작가
+                      제작
                     </span>
 
                     <span class="meta-value">
