@@ -1,12 +1,489 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDIO ROBOK</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>STUDIO ROBOK</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Pretendard,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background: #ffffff;
+      color: #111111;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      width: 100%;
+      height: 110px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 7vw;
+
+      border-bottom: 1px solid #e8e8e8;
+
+      background: #ffffff;
+    }
+
+    .logo img {
+      width: 150px;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      gap: 42px;
+
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+    }
+
+    nav a {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      bottom: 0;
+
+      width: 0;
+      height: 1px;
+
+      background: #111111;
+
+      transition: width 0.25s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+
+    /* HERO */
+
+    .hero {
+      min-height: calc(100vh - 110px);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      padding: 80px 20px;
+    }
+
+    .hero-logo {
+      width: min(420px, 70vw);
+
+      margin-bottom: 70px;
+    }
+
+    .hero h1 {
+      font-size: clamp(27px, 3vw, 48px);
+
+      font-weight: 500;
+      letter-spacing: -0.04em;
+
+      margin-bottom: 14px;
+    }
+
+    .hero h2 {
+      font-size: clamp(15px, 1.3vw, 19px);
+
+      font-weight: 400;
+
+      letter-spacing: 0.22em;
+
+      margin-bottom: 60px;
+    }
+
+    .hero-line {
+      width: 1px;
+      height: 60px;
+      background: #111111;
+    }
+
+
+    /* GENERAL SECTION */
+
+    section {
+      padding: 140px 8vw;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 0.25em;
+
+      margin-bottom: 45px;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 5vw, 76px);
+
+      font-weight: 500;
+
+      letter-spacing: -0.04em;
+
+      line-height: 1.1;
+
+      margin-bottom: 60px;
+    }
+
+
+    /* GAMES */
+
+    .games {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .game-card {
+      border-top: 1px solid #555555;
+
+      padding: 55px 0;
+
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+
+      gap: 30px;
+
+      align-items: center;
+    }
+
+    .game-number {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+
+      color: #888888;
+    }
+
+    .game-name {
+      font-size: clamp(25px, 3vw, 46px);
+
+      font-weight: 500;
+
+      letter-spacing: -0.04em;
+    }
+
+    .game-info {
+      font-size: 12px;
+      line-height: 2;
+
+      letter-spacing: 0.08em;
+
+      text-align: right;
+    }
+
+
+    /* ABOUT */
+
+    .about-text {
+      max-width: 950px;
+
+      font-size: clamp(24px, 3vw, 44px);
+
+      font-weight: 400;
+
+      line-height: 1.55;
+
+      letter-spacing: -0.04em;
+    }
+
+    .about-text strong {
+      font-weight: 600;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+      border-top: 1px solid #dddddd;
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 2fr;
+
+      gap: 50px;
+    }
+
+    .contact-info {
+      font-size: 15px;
+      line-height: 2.1;
+    }
+
+    .contact-email {
+      font-size: clamp(25px, 4vw, 55px);
+
+      font-weight: 500;
+
+      letter-spacing: -0.04em;
+
+      word-break: break-all;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 60px 8vw;
+
+      display: flex;
+      justify-content: space-between;
+
+      border-top: 1px solid #eeeeee;
+
+      font-size: 11px;
+      letter-spacing: 0.15em;
+    }
+
+
+    /* MOBILE */
+
+    @media(max-width: 768px) {
+
+      header {
+        height: 90px;
+        padding: 0 25px;
+      }
+
+      .logo img {
+        width: 115px;
+      }
+
+      nav {
+        gap: 16px;
+        font-size: 10px;
+      }
+
+      section {
+        padding: 100px 25px;
+      }
+
+      .hero {
+        min-height: calc(100vh - 90px);
+      }
+
+      .game-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .game-info {
+        text-align: left;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        padding: 40px 25px;
+
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
+  </style>
 </head>
+
+
 <body>
-    <h1>STUDIO ROBOK</h1>
-    <p>Studio Robok Official Website</p>
+
+
+<header>
+
+  <a class="logo" href="#">
+    <img src="studio-robok-logo.png" alt="STUDIO ROBOK">
+  </a>
+
+  <nav>
+    <a href="#games">GAMES</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+</header>
+
+
+
+<main>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <img
+      class="hero-logo"
+      src="studio-robok-logo.png"
+      alt="STUDIO ROBOK"
+    >
+
+    <h1>
+      당신의 이야기를 모두의 경험으로.
+    </h1>
+
+    <h2>
+      STUDIO ROBOK 입니다.
+    </h2>
+
+    <div class="hero-line"></div>
+
+  </section>
+
+
+
+  <!-- GAMES -->
+
+  <section class="games" id="games">
+
+    <div class="section-label">
+      OUR GAMES
+    </div>
+
+    <h2 class="section-title">
+      우리가 만든<br>
+      이야기들.
+    </h2>
+
+
+    <div class="game-card">
+
+      <div class="game-number">
+        001
+      </div>
+
+      <div class="game-name">
+        이세계 탐정<br>
+        : 팬미팅 살인사건
+      </div>
+
+      <div class="game-info">
+        MURDER MYSTERY<br>
+        8 PLAYERS
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-label">
+      ABOUT STUDIO ROBOK
+    </div>
+
+    <div class="about-text">
+
+      <strong>STUDIO ROBOK</strong>은
+      이야기를 만들고,
+      그 이야기를 사람들이 직접 경험할 수 있는
+      게임으로 만듭니다.
+
+      <br><br>
+
+      머더미스터리와 내러티브 게임을 중심으로
+      새로운 형태의 이야기를 연구합니다.
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="section-label">
+      CONTACT
+    </div>
+
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+
+        STUDIO ROBOK<br>
+
+        대표 정지복<br><br>
+
+        경기도 평택시 포승읍<br>
+        포승산단로40번길 15-21<br>
+        평택오션센트럴비즈 A동 2442호
+
+      </div>
+
+
+      <a
+        class="contact-email"
+        href="mailto:robok@studiorobok.com"
+      >
+        robok@studiorobok.com
+      </a>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+
+<footer>
+
+  <div>
+    STUDIO ROBOK
+  </div>
+
+  <div>
+    © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
+  </div>
+
+</footer>
+
+
 </body>
 </html>
