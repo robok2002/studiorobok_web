@@ -566,17 +566,55 @@
 
       border-top: 1px solid #777777;
 
-      padding: 28px 3vw 34px;
+      padding: 27px 3vw 31px;
 
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: flex-start;
 
-      gap: 25px;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      min-width: 0;
+    }
+
+    .footer-title {
+      font-size: 10px;
+      font-weight: 500;
+
+      letter-spacing: 0.22em;
+
+      margin-bottom: 9px;
+    }
+
+    .footer-details {
+      font-size: 9px;
+      font-weight: 400;
+
+      line-height: 1.75;
+
+      letter-spacing: 0.045em;
+
+      color: #777777;
+    }
+
+    .footer-details a {
+      transition: opacity 0.2s ease;
+    }
+
+    .footer-details a:hover {
+      opacity: 0.55;
+    }
+
+    .footer-copyright {
+      padding-top: 1px;
 
       font-size: 10px;
 
       letter-spacing: 0.22em;
+
+      white-space: nowrap;
     }
 
 
@@ -705,7 +743,19 @@
         flex-direction: column;
         align-items: flex-start;
 
-        gap: 10px;
+        gap: 22px;
+      }
+
+      .footer-copyright {
+        white-space: normal;
+
+        font-size: 9px;
+      }
+
+      .footer-details {
+        font-size: 8.5px;
+
+        line-height: 1.8;
       }
 
     }
@@ -1120,13 +1170,42 @@
 
   <footer>
 
-    <div>
-      STUDIO ROBOK
+
+    <div class="footer-brand">
+
+
+      <div class="footer-title">
+        STUDIO ROBOK
+      </div>
+
+
+      <div class="footer-details">
+
+        대표 정지복 ·
+        <a href="mailto:robok@studiorobok.com">
+          robok@studiorobok.com
+        </a>
+        ·
+        <a href="tel:01029365059">
+          010-2936-5059
+        </a>
+
+        <br>
+
+        경기도 평택시 포승읍 포승산단로40번길 15-21,
+        평택오션센트럴비즈 A동 2442호
+
+      </div>
+
+
     </div>
 
-    <div>
+
+
+    <div class="footer-copyright">
       © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
     </div>
+
 
   </footer>
 
