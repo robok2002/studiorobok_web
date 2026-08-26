@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>404 | STUDIO ROBOK</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta
+    name="description"
+    content="페이지를 찾을 수 없습니다. STUDIO ROBOK"
+  >
+
+  <style>
+
+    /* ========================================
+       RESET
+    ======================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      background: #000000;
+      color: #ffffff;
+
+      font-family:
+        Pretendard,
+        "Noto Sans KR",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* ========================================
+       404 PAGE
+    ======================================== */
+
+    .error-page {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 60px 25px;
+    }
+
+    .error-inner {
+      width: 100%;
+      max-width: 760px;
+
+      text-align: center;
+    }
+
+
+    /* ========================================
+       IMAGE
+    ======================================== */
+
+    .error-image {
+      width: 100%;
+      max-width: 560px;
+
+      margin: 0 auto 42px;
+    }
+
+    .error-image img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      margin: 0 auto;
+
+      image-rendering: pixelated;
+    }
+
+
+    /* ========================================
+       TEXT
+    ======================================== */
+
+    .error-code {
+      margin-bottom: 10px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: clamp(58px, 8vw, 100px);
+
+      font-weight: 400;
+
+      line-height: 1;
+
+      letter-spacing: -0.05em;
+    }
+
+    .error-title {
+      margin-bottom: 28px;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(24px, 3vw, 34px);
+
+      font-weight: 400;
+
+      line-height: 1.5;
+
+      letter-spacing: -0.04em;
+    }
+
+    .error-copy {
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: clamp(15px, 1.4vw, 18px);
+
+      line-height: 1.9;
+
+      color: #bdbdbd;
+    }
+
+
+    /* ========================================
+       BACK LINK
+    ======================================== */
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 12px;
+
+      margin-top: 43px;
+
+      padding-bottom: 6px;
+
+      border-bottom: 1px solid #777777;
+
+      font-family:
+        Georgia,
+        "Noto Serif KR",
+        serif;
+
+      font-size: 12px;
+
+      letter-spacing: 0.08em;
+
+      color: #ffffff;
+
+      transition:
+        opacity 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .back-arrow {
+      display: inline-block;
+
+      transition: transform 0.25s ease;
+    }
+
+    .back-link:hover {
+      opacity: 0.65;
+      border-color: #ffffff;
+    }
+
+    .back-link:hover .back-arrow {
+      transform: translateX(-5px);
+    }
+
+
+    /* ========================================
+       SMALL BRAND
+    ======================================== */
+
+    .brand {
+      margin-top: 65px;
+
+      font-size: 9px;
+
+      letter-spacing: 0.28em;
+
+      color: #555555;
+    }
+
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media (max-width: 768px) {
+
+      .error-page {
+        padding:
+          45px
+          22px
+          55px;
+      }
+
+      .error-image {
+        max-width: 500px;
+
+        margin-bottom: 35px;
+      }
+
+      .error-code {
+        font-size: 68px;
+      }
+
+      .error-title {
+        font-size: 26px;
+
+        margin-bottom: 23px;
+      }
+
+      .error-copy {
+        font-size: 15px;
+
+        line-height: 1.85;
+      }
+
+      .back-link {
+        margin-top: 38px;
+
+        font-size: 11px;
+      }
+
+      .brand {
+        margin-top: 50px;
+
+        font-size: 8px;
+      }
+
+    }
+
+
+    /* ========================================
+       SMALL MOBILE
+    ======================================== */
+
+    @media (max-width: 430px) {
+
+      .error-page {
+        padding-top: 35px;
+      }
+
+      .error-image {
+        width: 100%;
+
+        margin-bottom: 30px;
+      }
+
+      .error-code {
+        font-size: 62px;
+      }
+
+      .error-title {
+        font-size: 23px;
+      }
+
+      .error-copy {
+        font-size: 14px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <main class="error-page">
+
+
+    <div class="error-inner">
+
+
+      <!-- IMAGE -->
+
+      <div class="error-image">
+
+        <img
+          src="robok-404.gif"
+          alt="모닥불 앞에 앉아 있는 로복"
+        >
+
+      </div>
+
+
+
+      <!-- ERROR -->
+
+      <div class="error-code">
+        404
+      </div>
+
+
+      <h1 class="error-title">
+        뭔가 잘못됐습니다!
+      </h1>
+
+
+      <div class="error-copy">
+
+        저희가 뭔가 잘못 만들었거나,
+
+        <br>
+
+        당신이 엉뚱한 곳을 조사하고 있는 것 같네요...
+
+      </div>
+
+
+
+      <!-- BACK -->
+
+      <a
+        class="back-link"
+        href="/"
+      >
+
+        <span class="back-arrow">
+          ←
+        </span>
+
+        <span>
+          STUDIO ROBOK으로 돌아가기
+        </span>
+
+      </a>
+
+
+
+      <!-- BRAND -->
+
+      <div class="brand">
+        STUDIO ROBOK
+      </div>
+
+
+    </div>
+
+
+  </main>
+
+
+</body>
+</html>
