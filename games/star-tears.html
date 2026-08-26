@@ -7,6 +7,7 @@
   <title>별이 내린 눈물 | STUDIO ROBOK</title>
 
   <link rel="icon" type="image/png" href="../favicon.png">
+
   <meta
     name="description"
     content="1944년 독일 제7 연구소. 공간이동 기술 벨 시스템과 연구소장의 죽음을 둘러싼 미스터리, 별이 내린 눈물."
@@ -47,6 +48,15 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+
+    /* ========================================
+       MOBILE-ONLY BREAK
+    ======================================== */
+
+    .mobile-break {
+      display: none;
     }
 
 
@@ -692,6 +702,10 @@
 
     @media (max-width: 768px) {
 
+      .mobile-break {
+        display: block;
+      }
+
       header {
         height: 78px;
 
@@ -1137,7 +1151,8 @@
 
             <p>
               독일 정부의 지원을 받는 <strong>제7 연구소.</strong><br>
-              연구소장 클라우스는 인류 역사를 바꿀 기술을 개발했다.
+              연구소장 클라우스는,<span class="mobile-break"></span>
+              인류 역사를 바꿀 기술을 개발했다.
             </p>
 
 
@@ -1157,13 +1172,13 @@
 
 
             <p>
-              연구소는 보상을 약속하고
+              연구소는 보상을 약속하고<span class="mobile-break"></span>
               이 기술의 임상시험 실험체를 모집했다.
             </p>
 
 
             <p>
-              이에 사람들은 거액의 보상에 혹해
+              이에 사람들은 거액의 보상에 혹해<span class="mobile-break"></span>
               자발적으로 실험에 지원했다.
             </p>
 
@@ -1209,8 +1224,8 @@
 
 
             <p>
-              연구소장 <strong>클라우스</strong>가
-              자신의 방에서 시신으로 발견된 것이다.
+              연구소장 <strong>클라우스</strong>가 자신의 방에서<span class="mobile-break"></span>
+              시신으로 발견된 것이다.
             </p>
 
 
