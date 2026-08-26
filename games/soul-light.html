@@ -7,6 +7,7 @@
   <title>영혼의 빛이 머무는 자리 | STUDIO ROBOK</title>
 
   <link rel="icon" type="image/png" href="../favicon.png">
+
   <meta
     name="description"
     content="피해자의 영혼과 현장에 있던 6명의 용의자. 영혼의 빛이 머무는 자리."
@@ -47,6 +48,15 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+
+    /* ========================================
+       MOBILE-ONLY BREAK
+    ======================================== */
+
+    .mobile-break {
+      display: none;
     }
 
 
@@ -467,7 +477,6 @@
 
       text-align: center;
 
-      /* 영혼의 대사만 붉은색 */
       color: #d45a62;
     }
 
@@ -654,6 +663,10 @@
     ======================================== */
 
     @media (max-width: 768px) {
+
+      .mobile-break {
+        display: block;
+      }
 
       header {
         height: 78px;
@@ -1084,26 +1097,27 @@
 
 
             <p>
-              하지만, 비례대표로 선출된 젊은 국회의원
-              <strong>최철진</strong> 덕분에
-              용진시는 점점 발전했고,
+              하지만, 비례대표로 선출된 젊은 국회의원<span class="mobile-break"></span>
+              <strong>최철진</strong> 덕분에 용진시는 점점 발전했고,<span class="mobile-break"></span>
               다시 호황기를 맞이하게 됐다.
             </p>
 
 
             <p>
-              하지만, 낙후지역에 있는
-              <strong>‘용진빌라’</strong>에서
-              의문의 살인사건이 발생하고,
-              놀랍게도 그곳에 국회의원인 최철진이
-              헐레벌떡 찾아온다.
+              그러던 중, 낙후지역에 있는 <strong>‘용진빌라’</strong>에서<span class="mobile-break"></span>
+              의문의 살인사건이 발생하고 마는데...
             </p>
 
 
             <p>
-              더 놀라운 점은,<br>
-              죽은 <strong>‘김도욱’의 영혼</strong>이
-              보이기 시작했다는 것이다.
+              놀랍게도, 현장에 국회의원인 최철진이<span class="mobile-break"></span>
+              헐레벌떡 찾아온 게 아닌가?
+            </p>
+
+
+            <p>
+              놀라운 건 여기서 끝이 아니었다.<span class="mobile-break"></span>
+              죽은 <strong>‘김도욱’의 영혼</strong>이 보이기 시작한 것이다!
             </p>
 
 
