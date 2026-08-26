@@ -65,6 +65,15 @@
 
 
     /* ==============================
+       MOBILE-ONLY BREAK
+    ============================== */
+
+    .mobile-break {
+      display: none;
+    }
+
+
+    /* ==============================
        HEADER
     ============================== */
 
@@ -714,6 +723,10 @@
 
     @media (max-width: 768px) {
 
+      .mobile-break {
+        display: block;
+      }
+
       header {
         height: 78px;
 
@@ -1259,6 +1272,7 @@
 
           <div class="about-text">
             머더미스터리를 자체적으로 제작하며,
+            <span class="mobile-break"></span>
             제조 서비스를 제공합니다.
           </div>
 
@@ -1308,6 +1322,7 @@
 
           <div class="contact-text">
             제조 서비스 외에, 브랜드 협업 및
+            <span class="mobile-break"></span>
             콘텐츠 관련 협업도 진행합니다.
           </div>
 
