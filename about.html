@@ -7,6 +7,7 @@
   <title>ABOUT | STUDIO ROBOK</title>
 
   <link rel="icon" type="image/png" href="favicon.png">
+
   <meta
     name="description"
     content="2009년부터 종합 게임 스트리머로 활동해 온 로복이 만든 STUDIO ROBOK. 머더미스터리를 제작하고, 패키지 제조를 서비스합니다."
@@ -47,6 +48,15 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+
+    /* ========================================
+       RESPONSIVE BREAKS
+    ======================================== */
+
+    .mobile-break {
+      display: none;
     }
 
 
@@ -787,6 +797,14 @@
 
     @media (max-width: 768px) {
 
+      .mobile-break {
+        display: block;
+      }
+
+      .desktop-break {
+        display: none;
+      }
+
       header {
         height: 78px;
 
@@ -1112,8 +1130,10 @@
 
           <div class="profile-catch">
 
-            당신이 모르는 게임의 모든 것을<br>
-            <strong>파헤치고, 만들어낸다!</strong>
+            당신이 모르는,<span class="mobile-break"></span>
+            게임의 모든 것을<span class="desktop-break"><br></span>
+            파헤치고,<span class="mobile-break"></span>
+            <strong>만들어낸다!</strong>
 
           </div>
 
@@ -1207,10 +1227,11 @@
 
 
           <p>
-            끝내고 나면, 멋진 소설을 읽은 것 같은
+            끝내고 나면, 멋진 소설을 읽은 것 같은<span class="mobile-break"></span>
             기분 좋은 부유감이 남고<br>
-            또 한편으론, 명작 게임을 한 것 같은 즐거움에
-            가슴이 두근거리죠.
+
+            또 한편으론, 명작 게임을 한 것 같은<span class="mobile-break"></span>
+            즐거움에 가슴이 두근거리죠.
           </p>
 
 
@@ -1229,13 +1250,13 @@
 
 
           <p>
-            왜냐면, 잠자는 시간도 아껴가며
+            왜냐면, 잠자는 시간까지 아껴가며<span class="mobile-break"></span>
             밤낮없이 머더미스터리를 즐겨야 했거든요.
           </p>
 
 
           <p>
-            하면 할수록, 질리기는커녕
+            하면 할수록 질리기는커녕,<span class="mobile-break"></span>
             다음 작품이 기다려지는 장르...
           </p>
 
@@ -1254,27 +1275,29 @@
           <!-- CHAPTER 2 -->
 
           <div class="chapter-title">
-            그래서,<br>
-            머더미스터리를 만들기 시작했습니다.
+            그래서,<span class="desktop-break"><br></span>
+            머더미스터리를<span class="mobile-break"></span>
+            만들기 시작했습니다.
           </div>
 
 
           <p>
-            지금까지 종합 게임 스트리머로 활동하면서
+            지금까지 종합 게임 스트리머로 활동하면서,<span class="mobile-break"></span>
             온갖 게임을 즐겨봤습니다.
           </p>
 
 
           <p>
-            연극영화과 출신이라,
-            본래 영화 감상이 취미이기도 했죠.
+            연극영화과 출신이라, 본래 영화 감상이<span class="mobile-break"></span>
+            취미기도 했죠.
           </p>
 
 
           <p>
             제가 여태 쌓아온 모든 경험치를 쏟아부어,<br>
+
             <strong>
-              게임성과 스토리를 전부 만족시키는
+              게임성과 스토리를 전부 만족시키는<span class="mobile-break"></span>
               머더미스터리를 만들자!
             </strong>
           </p>
@@ -1301,7 +1324,8 @@
 
             <strong>
               ‘패키지 제조’라는,<br>
-              어마어마하게 높은 벽에 부딪힌 겁니다.
+              어마어마하게 높은 벽에<span class="mobile-break"></span>
+              부딪힌 겁니다.
             </strong>
 
           </div>
@@ -1357,13 +1381,13 @@
             <div class="mission-sub">
 
               저를 포함해서,
-              머더미스터리 제작이라는 꿈을 가진
-              국내의 모든 작가분들이
+              머더미스터리 제작이라는<span class="mobile-break"></span>
+              꿈을 가진 국내의 모든 작가분들이
 
               <br><br>
 
               <strong>
-                ‘제조’라는 단계 때문에
+                ‘제조’라는 단계 때문에<span class="mobile-break"></span>
                 꿈을 포기하지 않도록 만들자!
               </strong>
 
