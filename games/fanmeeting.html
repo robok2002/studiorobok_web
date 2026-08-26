@@ -7,6 +7,7 @@
   <title>이세계 탐정 : 팬미팅 살인사건 | STUDIO ROBOK</title>
 
   <link rel="icon" type="image/png" href="../favicon.png">
+
   <meta
     name="description"
     content="버츄얼 스트리머의 비공개 팬미팅에서 벌어진 의문의 살인사건. 이세계 탐정 시리즈의 첫 번째 이야기, 팬미팅 살인사건."
@@ -653,17 +654,55 @@
 
       border-top: 1px solid #777777;
 
-      padding: 28px 3vw 34px;
+      padding: 27px 3vw 31px;
 
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: flex-start;
 
-      gap: 25px;
+      gap: 40px;
+    }
+
+    .footer-brand {
+      min-width: 0;
+    }
+
+    .footer-title {
+      font-size: 10px;
+      font-weight: 500;
+
+      letter-spacing: 0.22em;
+
+      margin-bottom: 9px;
+    }
+
+    .footer-details {
+      font-size: 9px;
+      font-weight: 400;
+
+      line-height: 1.75;
+
+      letter-spacing: 0.045em;
+
+      color: #777777;
+    }
+
+    .footer-details a {
+      transition: opacity 0.2s ease;
+    }
+
+    .footer-details a:hover {
+      opacity: 0.55;
+    }
+
+    .footer-copyright {
+      padding-top: 1px;
 
       font-size: 10px;
 
       letter-spacing: 0.22em;
+
+      white-space: nowrap;
     }
 
 
@@ -884,7 +923,19 @@
         flex-direction: column;
         align-items: flex-start;
 
-        gap: 10px;
+        gap: 22px;
+      }
+
+      .footer-copyright {
+        white-space: normal;
+
+        font-size: 9px;
+      }
+
+      .footer-details {
+        font-size: 8.5px;
+
+        line-height: 1.8;
       }
 
     }
@@ -1126,29 +1177,31 @@
           <!-- INTRO -->
 
           <div class="about-opening">
-  버츄얼 스트리머 ‘냐콩’.
-</div>
+            버츄얼 스트리머 ‘냐콩’.
+          </div>
 
-<span class="red-line"></span>
 
-<div class="about-body">
+          <span class="red-line"></span>
 
-  <p>
-    그녀는 시골에 있는 소극장을 통째로 빌려<br>
-    한정된 인원만을 초대해 비공개 팬미팅을 개최했다.
-  </p>
 
-  <p>
-    하지만, 막이 오른 무대 위엔<br>
-    <strong>처음 보는 여성의 시체가 있었다!</strong>
-  </p>
+          <div class="about-body">
 
 
             <p>
+              그녀는 시골에 있는 소극장을 통째로 빌려<br>
+              한정된 인원만을 초대해 비공개 팬미팅을 개최했다.
+            </p>
 
+
+            <p>
+              하지만, 막이 오른 무대 위엔<br>
+              <strong>처음 보는 여성의 시체가 있었다!</strong>
+            </p>
+
+
+            <p>
               시체 옆에 주저앉아있던 냐콩은,<br>
               바들바들 떨며 외쳤다.
-
             </p>
 
 
@@ -1208,19 +1261,15 @@
             <div class="creator-copy">
 
               <p>
-
                 2009년부터 인터넷 방송인으로 활동해온<br>
                 <strong>‘1세대 스트리머’ 로복.</strong>
-
               </p>
 
 
               <p>
-
                 그가 직접,
                 <strong>‘라이브 스트리밍’</strong>을 주제로 제작한
                 머더미스터리!
-
               </p>
 
             </div>
@@ -1290,13 +1339,42 @@
 
   <footer>
 
-    <div>
-      STUDIO ROBOK
+
+    <div class="footer-brand">
+
+
+      <div class="footer-title">
+        STUDIO ROBOK
+      </div>
+
+
+      <div class="footer-details">
+
+        대표 정지복 ·
+        <a href="mailto:robok@studiorobok.com">
+          robok@studiorobok.com
+        </a>
+        ·
+        <a href="tel:01029365059">
+          010-2936-5059
+        </a>
+
+        <br>
+
+        경기도 평택시 포승읍 포승산단로40번길 15-21,
+        평택오션센트럴비즈 A동 2442호
+
+      </div>
+
+
     </div>
 
-    <div>
+
+
+    <div class="footer-copyright">
       © 2026 STUDIO ROBOK. ALL RIGHTS RESERVED.
     </div>
+
 
   </footer>
 
